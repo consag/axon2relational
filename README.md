@@ -10,18 +10,7 @@ If you just want to use the transformation, it is unlikely you need to change th
 
 ## Usage
 ### Input
-- logLevel <br />
-  Optional or Required: Required <br />
-  Purpose: Determines the amount and details of log information. <br />
-  Possible values (from detailed to only on Errors): DEBUG, INFO, WARN, ERROR <br />
-- url <br />
-  Optional or Required: Required <br />
-  Purpose: The URL under which the Axon API can be reached<br />
-  Possible values: Anything valid up to 1000 characters <br />
-- mainfacet_value <br />
-  Optional or Required: Required <br />
-  Purpose: Axon facet to use as input for the API call.<br />
-  Possible values: A valid Axon facet, eg. system<br />
+please be patient...
 
 ### Output
 - depends on the method used.
