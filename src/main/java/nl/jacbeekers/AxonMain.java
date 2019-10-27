@@ -25,20 +25,26 @@
 package nl.jacbeekers;
 
 import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Base64;
 
 public class AxonMain {
     public static void main(String[] args) {
         // write your code here
         org.apache.log4j.Logger logger = Logger.getLogger(AxonCall.class.getName());
 
+        int maxInLog = 100;
+
         String loginURL = args[0];
         String username = args[1];
         String password = args[2];
         String postURL = args[3];
         String mainFacet = args[4];
+        String maxDataRequested = "10000";
+        if (args.length >5) {
+            maxDataRequested = args[5];
+            logger.info("Maximum number of records to be retrieved is >" + maxDataRequested + "<.");
+        }
 
         AxonCall axonCall =null;
 
@@ -55,6 +61,7 @@ public class AxonMain {
 
         axonCall.setQueryURL(postURL);
         axonCall.setMainFacet(mainFacet);
+        axonCall.setLimit(maxDataRequested);
         axonCall.queryAxon();
         logger.info(axonCall.getResultCode());
         logger.info(axonCall.getResultMessage());
@@ -63,9 +70,28 @@ public class AxonMain {
 
         logger.info("axonData contains >" + axonData.size() + "< records.");
 
+        int i =0;
         for (ArrayList<String> record : axonData) {
-            logger.info(record.toString());
+            i++;
+            if (i>maxInLog) {
+                break;
+            }
+
+
+            logger.info("record is " + removeNonBMPCharacters(record.toString()));
+//            logger.info(record.toString());
         }
 
+    }
+    private static String removeNonBMPCharacters(final String input) {
+        StringBuilder strBuilder = new StringBuilder();
+        input.codePoints().forEach((i) -> {
+            if (Character.isSupplementaryCodePoint(i)) {
+                strBuilder.append("?");
+            } else {
+                strBuilder.append(Character.toChars(i));
+            }
+        });
+        return strBuilder.toString();
     }
 }
