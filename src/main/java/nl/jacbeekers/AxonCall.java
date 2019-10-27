@@ -26,7 +26,9 @@
 package nl.jacbeekers;
 
 import org.apache.log4j.Logger;
-
+import org.apache.commons.beanutils.PropertyUtils;
+import java.beans.PropertyDescriptor;
+import java.beans.PropertyDescriptor;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -54,6 +56,8 @@ public class AxonCall {
     private String totalItems = "-1";
     private String totalHits = "-1";
     private ArrayList<ArrayList<String>> axonDataRecords = new ArrayList<ArrayList<String>>();
+    private ArrayList<String> axonDataFields = new ArrayList<String>();
+    private ArrayList<AxonSystem> axonSystems = new ArrayList<AxonSystem>();
 
     // login
     private String username = Constants.NOT_PROVIDED;
@@ -243,12 +247,44 @@ public class AxonCall {
 
     private void generateSystemDataset(SystemResponse systemResponse) {
         ArrayList<ArrayList<String>> axonData = new ArrayList<ArrayList<String>>();
+        ArrayList<AxonSystem> axonSystems = new ArrayList<AxonSystem>();
 
         for ( SystemItem systemItem : systemResponse.items ) {
             axonData.add(systemItem.values);
+            AxonSystem axonSystem = new AxonSystem();
+            int fieldnr =-1;
+            for ( String value : systemItem.values ) {
+                fieldnr++;
+                if (fieldnr < systemResponse.fields.size()) {
+                    // Getting the PropertyDescriptors for the object
+                    PropertyDescriptor[] objDescriptors = PropertyUtils.getPropertyDescriptors(axonSystem);
+
+                    // Iterating through each of the PropertyDescriptors
+                    for (PropertyDescriptor objDescriptor : objDescriptors) {
+                        try {
+                            String propertyName = objDescriptor.getName();
+                            PropertyUtils.setProperty(axonSystem, systemResponse.fields.get(fieldnr), value);
+                            Object propValue = PropertyUtils.getProperty(axonSystem, propertyName);
+
+                            // Printing the details
+                            System.out.println("Property="+propertyName+", Value="+propValue);
+                        } catch (Exception e) {
+                            logError(Constants.DATA_STRUCTURE_ERROR, e.getMessage());
+                        }
+                    }
+
+                } else {
+                    logError(Constants.DATA_STRUCTURE_ERROR, "More data than fields.");
+                }
+            }
+
+            axonSystems.add(axonSystem);
         }
 
+        setAxonDataFields(systemResponse.fields);
         setAxonDataRecords(axonData);
+        setAxonSystems(axonSystems);
+
     }
 
     private void generateDatasetDataset(DatasetResponse datasetResponse) {
@@ -258,6 +294,7 @@ public class AxonCall {
             axonData.add(datasetItem.values);
         }
 
+        setAxonDataFields(datasetResponse.fields);
         setAxonDataRecords(axonData);
     }
 
@@ -268,12 +305,30 @@ public class AxonCall {
             axonData.add(attributeItem.values);
         }
 
+        setAxonDataFields(attributeResponse.fields);
         setAxonDataRecords(axonData);
     }
 
     //
     //getters setters
     //
+
+
+    public ArrayList<AxonSystem> getAxonSystems() {
+        return axonSystems;
+    }
+
+    public void setAxonSystems(ArrayList<AxonSystem> axonSystems) {
+        this.axonSystems = axonSystems;
+    }
+
+    public ArrayList<String> getAxonDataFields() {
+        return axonDataFields;
+    }
+
+    public void setAxonDataFields(ArrayList<String> axonDataFields) {
+        this.axonDataFields = axonDataFields;
+    }
 
     public String getLimit() {
         return limit;
@@ -563,7 +618,8 @@ class SystemItem {
     String ref;
     String id;
     ArrayList<String> values;
-    /*
+}
+class AxonSystem {
     String ref;
     String id;
     String name;
@@ -582,7 +638,6 @@ class SystemItem {
     String irating;
     String arating;
     String ciarating;
-*/
 }
 
 class DatasetResponse {
@@ -597,6 +652,22 @@ class DatasetItem {
     String id;
     ArrayList<String> values;
 }
+class AxonDataset {
+ String id;
+ String name;
+ String definition;
+ String refNumber;
+ String type;
+ String axonStatus;
+ String lifecycle;
+ String systemId;
+ String systemName;
+ String glossaryId;
+ String glossaryName;
+ String createdDate;
+ String lastUpdatedDate;
+ String accessControl;
+}
 
 class AttributeResponse {
     String facetId;
@@ -609,4 +680,25 @@ class AttributeItem {
     String ref;
     String id;
     ArrayList<String> values;
+}
+class AxonAttribute {
+    String id;
+    String name;
+    String definition;
+    String refNumber;
+    String dataSetId;
+    String dataSetName;
+    String dbName;
+    String systemId;
+    String systemName;
+    String origination;
+    String discoveryReviewStatus;
+    String confidenceScore;
+    String editabilityRole;
+    String editability;
+    String glossaryId;
+    String glossaryName;
+    String mandatory;
+    String createdDate;
+    String lastUpdatedDate;
 }

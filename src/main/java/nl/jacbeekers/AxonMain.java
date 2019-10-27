@@ -30,14 +30,22 @@ import java.util.ArrayList;
 public class AxonMain {
     public static void usage(org.apache.log4j.Logger logger) {
         logger.info("Usage:");
-        logger.info(AxonMain.class.getName() +" <loginURL> <username> <password> <queryURL> <mainFact>" );
-
+        logger.info(AxonMain.class.getName() +" <loginURL> <username> <password> <queryURL> <mainFacet> [maxNrRecords]" );
+        logger.info("where:");
+        logger.info("  <loginURL> is the complete login URL for Axon, including http(s), hostname, port.");
+        logger.info("  <username> is the Axon username to be used.");
+        logger.info("  <password> is the password of the Axon username. In this version clear text (unfortunately).");
+        logger.info("  <queryURL> is the complete URL for the Axon API queries.");
+        logger.info("  <mainFacet> is the facet you want the data for, e.g. SYSTEM, DATASET or ATTRIBUTE. Case insensitive");
+        logger.info("  [maxNrRecords] is optional and limits the result to the number mentioned. Default=10000");
     }
+
     public static void main(String[] args) {
         org.apache.log4j.Logger logger = Logger.getLogger(AxonMain.class.getName());
 
-        if (args.length == 0) {
+        if (args.length < 5) {
             usage(logger);
+            return;
         }
         int maxInLog = 100;
 
@@ -73,9 +81,11 @@ public class AxonMain {
         logger.info(axonCall.getResultMessage());
 
         ArrayList<ArrayList<String>> axonData = axonCall.getAxonDataRecords();
+        ArrayList<String> axonFields = axonCall.getAxonDataFields();
 
         logger.info("axonData contains >" + axonData.size() + "< records.");
 
+        logger.info("The fields : " + axonFields.toString());
         int i =0;
         for (ArrayList<String> record : axonData) {
             i++;
@@ -83,9 +93,7 @@ public class AxonMain {
                 break;
             }
 
-
             logger.info("record is " + removeNonBMPCharacters(record.toString()));
-//            logger.info(record.toString());
         }
 
     }
