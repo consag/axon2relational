@@ -45,6 +45,9 @@ public class AxonCall {
     private String resultCode = Constants.OK;
     private String resultMessage = Constants.getResultMessage(resultCode);
 
+    // query
+    private String limit = "1000";
+
     // response
     private String response = Constants.UNKNOWN;
     private String facetId = Constants.UNKNOWN;
@@ -120,7 +123,7 @@ public class AxonCall {
 */
         SystemQuery systemQuery = new SystemQuery();
         systemQuery.setMainFacet(getMainFacet());
-        systemQuery.setSearchScope(getMainFacet(), "0", "10000", "0");
+        systemQuery.setSearchScope(getMainFacet(), "0", getLimit(), "0");
         String requestBody = new Gson().toJson(systemQuery);
         logDebug(procName, "Gson generated requestBody: " + requestBody);
 
@@ -137,12 +140,28 @@ public class AxonCall {
                 logDebug(procName, "without first and last char: " + jsonString);
                 switch (getMainFacet()) {
                     case "system":
-                        SystemResponse response = new Gson().fromJson(jsonString, SystemResponse.class);
-                        logDebug(procName, "Total items found: " + response.totalHits);
-                        setFacetId(response.facetId);
-                        setTotalItems(response.totalItems);
-                        setTotalHits(response.totalHits);
-                        generateSystemDataset(response);
+                        SystemResponse systemResponse = new Gson().fromJson(jsonString, SystemResponse.class);
+                        logDebug(procName, "Total items found: " + systemResponse.totalHits);
+                        setFacetId(systemResponse.facetId);
+                        setTotalItems(systemResponse.totalItems);
+                        setTotalHits(systemResponse.totalHits);
+                        generateSystemDataset(systemResponse);
+                        break;
+                    case "dataset":
+                        DatasetResponse datasetResponse = new Gson().fromJson(jsonString, DatasetResponse.class);
+                        logDebug(procName, "Total items found: " + datasetResponse.totalHits);
+                        setFacetId(datasetResponse.facetId);
+                        setTotalItems(datasetResponse.totalItems);
+                        setTotalHits(datasetResponse.totalHits);
+                        generateDatasetDataset(datasetResponse);
+                        break;
+                    case "attribute":
+                        AttributeResponse attributeResponse = new Gson().fromJson(jsonString, AttributeResponse.class);
+                        logDebug(procName, "Total items found: " + attributeResponse.totalHits);
+                        setFacetId(attributeResponse.facetId);
+                        setTotalItems(attributeResponse.totalItems);
+                        setTotalHits(attributeResponse.totalHits);
+                        generateAttributeDataset(attributeResponse);
                         break;
                     default:
                         logError(procName, "facet >" + getMainFacet() + "< not yet supported.");
@@ -232,9 +251,38 @@ public class AxonCall {
         setAxonDataRecords(axonData);
     }
 
+    private void generateDatasetDataset(DatasetResponse datasetResponse) {
+        ArrayList<ArrayList<String>> axonData = new ArrayList<ArrayList<String>>();
+
+        for ( DatasetItem datasetItem : datasetResponse.items ) {
+            axonData.add(datasetItem.values);
+        }
+
+        setAxonDataRecords(axonData);
+    }
+
+    private void generateAttributeDataset(AttributeResponse attributeResponse) {
+        ArrayList<ArrayList<String>> axonData = new ArrayList<ArrayList<String>>();
+
+        for ( AttributeItem attributeItem : attributeResponse.items ) {
+            axonData.add(attributeItem.values);
+        }
+
+        setAxonDataRecords(axonData);
+    }
+
     //
     //getters setters
     //
+
+    public String getLimit() {
+        return limit;
+    }
+
+    public void setLimit(String limit) {
+        this.limit = limit;
+    }
+
     private void setAxonDataRecords(ArrayList<ArrayList<String>> axonDataRecords) {
         this.axonDataRecords = axonDataRecords;
     }
@@ -504,18 +552,17 @@ class LoginResponse {
     String token;
 }
 
-class SystemItem {
-    String ref;
-    String id;
-    ArrayList<String> values;
-}
-
 class SystemResponse {
     String facetId;
     String totalItems;
     String totalHits;
     ArrayList<String> fields;
     ArrayList<SystemItem> items;
+}
+class SystemItem {
+    String ref;
+    String id;
+    ArrayList<String> values;
     /*
     String ref;
     String id;
@@ -536,5 +583,30 @@ class SystemResponse {
     String arating;
     String ciarating;
 */
+}
 
+class DatasetResponse {
+    String facetId;
+    String totalItems;
+    String totalHits;
+    ArrayList<String> fields;
+    ArrayList<DatasetItem> items;
+}
+class DatasetItem {
+    String ref;
+    String id;
+    ArrayList<String> values;
+}
+
+class AttributeResponse {
+    String facetId;
+    String totalItems;
+    String totalHits;
+    ArrayList<String> fields;
+    ArrayList<AttributeItem> items;
+}
+class AttributeItem {
+    String ref;
+    String id;
+    ArrayList<String> values;
 }
