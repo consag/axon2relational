@@ -40,6 +40,7 @@ public class Constants {
     public static final String LOGIN_FAILED ="API-001";
     public static final String POST_FAILED ="API-002";
     public static final String QUERY_FAILED ="API-003";
+    public static final String DATA_STRUCTURE_ERROR ="API-004";
 
     Map results = new HashMap();
     public static Map<String, String> result;
@@ -53,6 +54,7 @@ public class Constants {
         result.put(POST_FAILED, "POST request failed");
         result.put(NOT_FOUND, "Item could not be found");
         result.put(QUERY_FAILED, "Query failed");
+        result.put(DATA_STRUCTURE_ERROR, "Received data does not match received fiels.");
     }
 
     //true/false
