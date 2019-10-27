@@ -30,10 +30,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class AxonMain {
-    public static void main(String[] args) {
-        // write your code here
-        org.apache.log4j.Logger logger = Logger.getLogger(AxonCall.class.getName());
+    public static void usage(org.apache.log4j.Logger logger) {
+        logger.info("Usage:");
+        logger.info(AxonMain.class.getName() +" <loginURL> <username> <password> <queryURL> <mainFact>" );
 
+    }
+    public static void main(String[] args) {
+        org.apache.log4j.Logger logger = Logger.getLogger(AxonMain.class.getName());
+
+        if (args.length == 0) {
+            usage(logger);
+        }
         String loginURL = args[0];
         String username = args[1];
         String password = args[2];
