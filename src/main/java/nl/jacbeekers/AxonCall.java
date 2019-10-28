@@ -26,15 +26,14 @@
 package nl.jacbeekers;
 
 import org.apache.log4j.Logger;
-import org.apache.commons.beanutils.PropertyUtils;
-import java.beans.PropertyDescriptor;
-import java.beans.PropertyDescriptor;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import com.google.gson.Gson;
 
@@ -246,36 +245,75 @@ public class AxonCall {
     }
 
     private void generateSystemDataset(SystemResponse systemResponse) {
+        String procName ="generateSystemDataset";
         ArrayList<ArrayList<String>> axonData = new ArrayList<ArrayList<String>>();
-        ArrayList<AxonSystem> axonSystems = new ArrayList<AxonSystem>();
+//        ArrayList<AxonSystem> axonSystems = new ArrayList<AxonSystem>();
 
         for ( SystemItem systemItem : systemResponse.items ) {
             axonData.add(systemItem.values);
             AxonSystem axonSystem = new AxonSystem();
-            int fieldnr =-1;
-            for ( String value : systemItem.values ) {
-                fieldnr++;
-                if (fieldnr < systemResponse.fields.size()) {
-                    // Getting the PropertyDescriptors for the object
-                    PropertyDescriptor[] objDescriptors = PropertyUtils.getPropertyDescriptors(axonSystem);
-
-                    // Iterating through each of the PropertyDescriptors
-                    for (PropertyDescriptor objDescriptor : objDescriptors) {
-                        try {
-                            String propertyName = objDescriptor.getName();
-                            PropertyUtils.setProperty(axonSystem, systemResponse.fields.get(fieldnr), value);
-                            Object propValue = PropertyUtils.getProperty(axonSystem, propertyName);
-
-                            // Printing the details
-                            System.out.println("Property="+propertyName+", Value="+propValue);
-                        } catch (Exception e) {
-                            logError(Constants.DATA_STRUCTURE_ERROR, e.getMessage());
-                        }
+            logVerbose("record values: " + systemItem.values);
+            for ( int fieldnr =0 ; fieldnr < systemResponse.fields.size() ; fieldnr++ ){
+                    logVerbose("fieldnr >" + fieldnr + "< named >" + systemResponse.fields.get(fieldnr)+"< has value >"
+                            + systemItem.values.get(fieldnr) +"<.");
+                    // cannot use gson as we are not sure that the field list (and therefore the value list) will always be in the same order as the attributes in the class
+                    // if you are an experienced Java developer: let us know how to achieve this better.
+                    switch (systemResponse.fields.get(fieldnr)) {
+                        case "id":
+                            axonSystem.id = systemItem.values.get(fieldnr);
+                            break;
+                        case "name":
+                            axonSystem.name = systemItem.values.get(fieldnr);
+                            break;
+                        case "description":
+                            axonSystem.description = systemItem.values.get(fieldnr);
+                            break;
+                        case "parentId":
+                            axonSystem.parentId = systemItem.values.get(fieldnr);
+                            break;
+                        case "parentName":
+                            axonSystem.parentName = systemItem.values.get(fieldnr);
+                            break;
+                        case "type":
+                            axonSystem.type = systemItem.values.get(fieldnr);
+                            break;
+                        case "axonStatus":
+                            axonSystem.axonStatus = systemItem.values.get(fieldnr);
+                            break;
+                        case "longName":
+                            axonSystem.longName = systemItem.values.get(fieldnr);
+                            break;
+                        case "lifecycle":
+                            axonSystem.lifecycle = systemItem.values.get(fieldnr);
+                            break;
+                        case "classification":
+                            axonSystem.classification = systemItem.values.get(fieldnr);
+                            break;
+                        case "createdDate":
+                            axonSystem.createdDate = systemItem.values.get(fieldnr);
+                            break;
+                        case "lastUpdatedDate":
+                            axonSystem.lastUpdatedDate = systemItem.values.get(fieldnr);
+                            break;
+                        case "accessControl":
+                            axonSystem.accessControl = systemItem.values.get(fieldnr);
+                            break;
+                        case "crating":
+                            axonSystem.crating = systemItem.values.get(fieldnr);
+                            break;
+                        case "irating":
+                            axonSystem.irating = systemItem.values.get(fieldnr);
+                            break;
+                        case "arating":
+                            axonSystem.arating = systemItem.values.get(fieldnr);
+                            break;
+                        case "ciarating":
+                            axonSystem.ciarating = systemItem.values.get(fieldnr);
+                            break;
+                            default:
+                            logError(Constants.DATA_STRUCTURE_ERROR, "Fieldname in JSON is not part of Java class structure. Please report this error to the developer.");
+                            break;
                     }
-
-                } else {
-                    logError(Constants.DATA_STRUCTURE_ERROR, "More data than fields.");
-                }
             }
 
             axonSystems.add(axonSystem);
@@ -620,7 +658,6 @@ class SystemItem {
     ArrayList<String> values;
 }
 class AxonSystem {
-    String ref;
     String id;
     String name;
     String description;

@@ -80,12 +80,9 @@ public class AxonMain {
         logger.info(axonCall.getResultCode());
         logger.info(axonCall.getResultMessage());
 
-        ArrayList<ArrayList<String>> axonData = axonCall.getAxonDataRecords();
-        ArrayList<String> axonFields = axonCall.getAxonDataFields();
-
+        //Old way
+/*        ArrayList<ArrayList<String>> axonData = axonCall.getAxonDataRecords();
         logger.info("axonData contains >" + axonData.size() + "< records.");
-
-        logger.info("The fields : " + axonFields.toString());
         int i =0;
         for (ArrayList<String> record : axonData) {
             i++;
@@ -95,6 +92,23 @@ public class AxonMain {
 
             logger.info("record is " + removeNonBMPCharacters(record.toString()));
         }
+*/
+        //New way
+        ArrayList<String> axonFields = axonCall.getAxonDataFields();
+        ArrayList<AxonSystem> axonSystems = axonCall.getAxonSystems();
+        logger.info("The fields : " + axonFields.toString());
+
+        int counter =0;
+        for (AxonSystem record : axonSystems) {
+            counter++;
+            if ( counter > maxInLog) {
+                break;
+            }
+
+            logger.info("record >" + counter + "< id >" + record.id + "< name is >" + record.name +"<.");
+        }
+
+
 
     }
     private static String removeNonBMPCharacters(final String input) {
