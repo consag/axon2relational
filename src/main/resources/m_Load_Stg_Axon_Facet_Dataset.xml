@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imx:IMX xmlns:imx="http://com.informatica.imx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" serializationSpecVersion="12.0" crcEnabled="1" xmlns:connectinfo1="http://com.informatica.metadata.common.connectinfo/2" versionconnectinfo1="2.4.0" xmlns:typelibrary="http://com.informatica.metadata.common.typesystem.typelibrary/2" versiontypelibrary="2.4.0" xmlns:rule="http://com.informatica.metadata.common.rule/1" versionrule="1.5.0" xmlns:javatx="http://com.informatica.metadata.common.transformation.javatx/2" versionjavatx="2.5.0" xmlns:project="http://com.informatica.metadata.common.project/2" versionproject="2.2.0" xmlns:description="http://com.informatica.metadata.common.description/2" versiondescription="2.1.0" xmlns:source1="http://com.informatica.metadata.common.txhandlerconfig.source/2" versionsource1="2.1.0" xmlns:source="http://com.informatica.metadata.common.transformation.source/2" versionsource="2.1.0" xmlns:target1="http://com.informatica.metadata.common.txhandlerconfig.target/2" versiontarget1="2.4.0" xmlns:resourceaccess1="http://com.informatica.metadata.common.txhandlerconfig.resourceaccess/2" versionresourceaccess1="2.1.0" xmlns:datasourceoperation="http://com.informatica.metadata.relational.datasourceoperation/2" versiondatasourceoperation="2.10.0" xmlns:datarecord="http://com.informatica.metadata.relational.datarecord/2" versiondatarecord="2.5.0" xmlns:connectinfo="http://com.informatica.metadata.relational.connectinfo/0" versionconnectinfo="9.0.8.0" xmlns:optimizer="http://com.informatica.metadata.common.optimizer/1" versionoptimizer="1.0.1" xmlns:txhandlerconfig="http://com.informatica.metadata.common.txhandlerconfig/2" versiontxhandlerconfig="2.1.1" xmlns:optimizerconfig="http://com.informatica.metadata.common.optimizerconfig/1" versionoptimizerconfig="1.0.0" xmlns:parameter="http://com.informatica.metadata.common.parameter/9" versionparameter="9.9.1" xmlns:mapping="http://com.informatica.metadata.common.mapping/2" versionmapping="2.10.1" xmlns:types="http://com.informatica.metadata.common.types/2" versiontypes="2.4.0" xmlns:adapter="http://com.informatica.metadata.common.adapter/2" versionadapter="2.2.0" xmlns:expression="http://com.informatica.metadata.common.transformation.expression/2" versionexpression="2.2.1" xmlns:datasourceoperation1="http://com.informatica.metadata.common.datasourceoperation/2" versiondatasourceoperation1="2.6.1" xmlns:datahandler="http://com.informatica.metadata.common.datahandler/2" versiondatahandler="2.2.0" xmlns:runtime="http://com.informatica.metadata.common.runtime/2" versionruntime="2.12.1" xmlns:mapplet="http://com.informatica.metadata.common.mapping.mapplet/2" versionmapplet="2.0.0" xmlns:transformation="http://com.informatica.metadata.common.transformation/3" versiontransformation="3.5.0" xmlns:dsoconfig1="http://com.informatica.metadata.common.dsoconfig/2" versiondsoconfig1="2.1.0" xmlns:target="http://com.informatica.metadata.common.transformation.target/2" versiontarget="2.4.0" xmlns:core="http://com.informatica.metadata.common.core/2" versioncore="2.1.1" xmlns:folder="http://com.informatica.metadata.common.folder/2" versionfolder="2.1.1" xmlns:resourceaccess="http://com.informatica.metadata.common.transformation.resourceaccess/2" versionresourceaccess="2.3.0" xmlns:dsoconfig="http://com.informatica.metadata.relational.dsoconfig/2" versiondsoconfig="2.2.0" xmlns:pdo="http://com.informatica.metadata.common.optimizerconfig.pdo/1" versionpdo="1.0.0" xmlns:typesystem="http://com.informatica.metadata.common.typesystem/2" versiontypesystem="2.2.0" xsi:schemaLocation="http://com.informatica.imx IMX.xsd http://com.informatica.metadata.common.connectinfo/2 com.informatica.metadata.common.connectinfo.xsd http://com.informatica.metadata.common.typesystem.typelibrary/2 com.informatica.metadata.common.typesystem.typelibrary.xsd http://com.informatica.metadata.common.rule/1 com.informatica.metadata.common.rule.xsd http://com.informatica.metadata.common.transformation.javatx/2 com.informatica.metadata.common.transformation.javatx.xsd http://com.informatica.metadata.common.project/2 com.informatica.metadata.common.project.xsd http://com.informatica.metadata.common.description/2 com.informatica.metadata.common.description.xsd http://com.informatica.metadata.common.txhandlerconfig.source/2 com.informatica.metadata.common.txhandlerconfig.source.xsd http://com.informatica.metadata.common.transformation.source/2 com.informatica.metadata.common.transformation.source.xsd http://com.informatica.metadata.common.txhandlerconfig.target/2 com.informatica.metadata.common.txhandlerconfig.target.xsd http://com.informatica.metadata.common.txhandlerconfig.resourceaccess/2 com.informatica.metadata.common.txhandlerconfig.resourceaccess.xsd http://com.informatica.metadata.relational.datasourceoperation/2 com.informatica.metadata.relational.datasourceoperation.xsd http://com.informatica.metadata.relational.datarecord/2 com.informatica.metadata.relational.datarecord.xsd http://com.informatica.metadata.relational.connectinfo/0 com.informatica.metadata.relational.connectinfo.xsd http://com.informatica.metadata.common.optimizer/1 com.informatica.metadata.common.optimizer.xsd http://com.informatica.metadata.common.txhandlerconfig/2 com.informatica.metadata.common.txhandlerconfig.xsd http://com.informatica.metadata.common.optimizerconfig/1 com.informatica.metadata.common.optimizerconfig.xsd http://com.informatica.metadata.common.parameter/9 com.informatica.metadata.common.parameter.xsd http://com.informatica.metadata.common.mapping/2 com.informatica.metadata.common.mapping.xsd http://com.informatica.metadata.common.types/2 com.informatica.metadata.common.types.xsd http://com.informatica.metadata.common.adapter/2 com.informatica.metadata.common.adapter.xsd http://com.informatica.metadata.common.transformation.expression/2 com.informatica.metadata.common.transformation.expression.xsd http://com.informatica.metadata.common.datasourceoperation/2 com.informatica.metadata.common.datasourceoperation.xsd http://com.informatica.metadata.common.datahandler/2 com.informatica.metadata.common.datahandler.xsd http://com.informatica.metadata.common.runtime/2 com.informatica.metadata.common.runtime.xsd http://com.informatica.metadata.common.mapping.mapplet/2 com.informatica.metadata.common.mapping.mapplet.xsd http://com.informatica.metadata.common.transformation/3 com.informatica.metadata.common.transformation.xsd http://com.informatica.metadata.common.dsoconfig/2 com.informatica.metadata.common.dsoconfig.xsd http://com.informatica.metadata.common.transformation.target/2 com.informatica.metadata.common.transformation.target.xsd http://com.informatica.metadata.common.core/2 com.informatica.metadata.common.core.xsd http://com.informatica.metadata.common.folder/2 com.informatica.metadata.common.folder.xsd http://com.informatica.metadata.common.transformation.resourceaccess/2 com.informatica.metadata.common.transformation.resourceaccess.xsd http://com.informatica.metadata.relational.dsoconfig/2 com.informatica.metadata.relational.dsoconfig.xsd http://com.informatica.metadata.common.optimizerconfig.pdo/1 com.informatica.metadata.common.optimizerconfig.pdo.xsd http://com.informatica.metadata.common.typesystem/2 com.informatica.metadata.common.typesystem.xsd">
+<mapping:Mapping imx:id="U:ofdixvjuEemkzLxtKg2PjQ" name="m_Load_Stg_Axon_Facet_Dataset">
+<characteristics>
+<Characteristic imx:id="ID_1" xsi:type="runtime:RuntimeCharacteristic" maximumDataErrors="1" maximumRuntimeIntervalPerSource="PT0S" selectedExecutionEnvironmentName="native" stateStore.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.StateStore">
+<environments>
+<ExecutionEnvironment imx:id="ID_2" xsi:type="runtime:NativeExecutionEnvironment">
+<partitioningConfig imx:id="ID_3" xsi:type="runtime:NativePartitioningConfig"/>
+</ExecutionEnvironment>
+</environments>
+<handlers>
+<TxHandlerConfig imx:id="ID_4" xsi:type="target1:TargetTxHandlerConfig" txInstance="U:8e1wL_jwEemkzLxtKg2PjQ" selectedAdapter="smd:com.informatica.metadata.seed.relational.CanonicalRelational.relationalWriterDataAdapter" rejectDirectory.="smd:com.informatica.metadata.common.parameter.util.InfaParameterSeed.RejectDir" rejectFile="Write_DQR_STG_AXON_DATASET.bad"/>
+</handlers>
+<streamingConfig imx:id="ID_5" xsi:type="runtime:StreamingConfig" batchInterval="PT20S" cacheRefreshInterval="PT1H"/>
+</Characteristic>
+<Characteristic imx:id="ID_6" xsi:type="optimizer:OptimizerCharacteristic">
+<configs>
+<OptimizerConfig imx:id="ID_7" xsi:type="pdo:PushdownConfig"/>
+</configs>
+</Characteristic>
+</characteristics>
+<definedLibraries imx:id="U:ofeJ1_juEemkzLxtKg2PjQ" xsi:type="typelibrary:TypeLibrary" name="m_Type_Definition_Library" typeSystem="smd:com.informatica.metadata.seed.platform.Platform.typesystem"/>
+<instances>
+<Instance imx:id="U:ofeJ2PjuEemkzLxtKg2PjQ" xsi:type="mapping:Instance" name="Exp_Add_Fields" toOutlineLinks="ID_8" transformation="U:ofeJ3fjuEemkzLxtKg2PjQ">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_9" xsi:type="mapping:OutlineLink" fromInstance="U:ofeJ2PjuEemkzLxtKg2PjQ" toInstance="U:ofeJ2fjuEemkzLxtKg2PjQ"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_10" xsi:type="mapping:TransformationFieldPort" fromPort="ID_11" toPorts="ID_12" instance="U:ofeJ2PjuEemkzLxtKg2PjQ" transformationField="U:ofexPPjuEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_13" xsi:type="mapping:TransformationFieldPort" toPorts="ID_14" instance="U:ofeJ2PjuEemkzLxtKg2PjQ" transformationField="U:ofexO_juEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_15" xsi:type="mapping:TransformationFieldPort" fromPort="ID_16" toPorts="ID_17" instance="U:ofeJ2PjuEemkzLxtKg2PjQ" transformationField="U:ofexP_juEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_18" xsi:type="mapping:TransformationFieldPort" fromPort="ID_19" toPorts="ID_20" instance="U:ofeJ2PjuEemkzLxtKg2PjQ" transformationField="U:ofexQPjuEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_21" xsi:type="mapping:TransformationFieldPort" fromPort="ID_22" toPorts="ID_23" instance="U:ofeJ2PjuEemkzLxtKg2PjQ" transformationField="U:ofexQfjuEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_24" xsi:type="mapping:TransformationFieldPort" fromPort="ID_25" toPorts="ID_26" instance="U:ofeJ2PjuEemkzLxtKg2PjQ" transformationField="U:ofexPfjuEemkzLxtKg2PjQ"/>
+</ports>
+</Instance>
+<Instance imx:id="U:ofeJ2fjuEemkzLxtKg2PjQ" xsi:type="mapping:Instance" name="java_Axon" toOutlineLinks="ID_9" transformation="U:ofeJ3vjuEemkzLxtKg2PjQ">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_27" xsi:type="mapping:OutlineLink" fromInstance="U:ofeJ2fjuEemkzLxtKg2PjQ" toInstance="U:ofeJ3PjuEemkzLxtKg2PjQ"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_12" xsi:type="mapping:TransformationFieldPort" fromPort="ID_10" instance="U:ofeJ2fjuEemkzLxtKg2PjQ" transformationField="U:ofexNPjuEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_14" xsi:type="mapping:TransformationFieldPort" fromPort="ID_13" instance="U:ofeJ2fjuEemkzLxtKg2PjQ" transformationField="U:ofexNfjuEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_17" xsi:type="mapping:TransformationFieldPort" fromPort="ID_15" instance="U:ofeJ2fjuEemkzLxtKg2PjQ" transformationField="U:ofexN_juEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_20" xsi:type="mapping:TransformationFieldPort" fromPort="ID_18" instance="U:ofeJ2fjuEemkzLxtKg2PjQ" transformationField="U:ofexOPjuEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_23" xsi:type="mapping:TransformationFieldPort" fromPort="ID_21" instance="U:ofeJ2fjuEemkzLxtKg2PjQ" transformationField="U:ofexOfjuEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_26" xsi:type="mapping:TransformationFieldPort" fromPort="ID_24" instance="U:ofeJ2fjuEemkzLxtKg2PjQ" transformationField="U:ofexNvjuEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_28" xsi:type="mapping:GroupPort" toPorts="ID_29" instance="U:ofeJ2fjuEemkzLxtKg2PjQ" dataInterface="U:ofeKEvjuEemkzLxtKg2PjQ"/>
+</ports>
+</Instance>
+<Instance imx:id="U:ofeJ2vjuEemkzLxtKg2PjQ" xsi:type="mapping:Instance" name="mplt_Extract_AxonConnectInfo" transformation="U:ofeJ3_juEemkzLxtKg2PjQ">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_8" xsi:type="mapping:OutlineLink" fromInstance="U:ofeJ2vjuEemkzLxtKg2PjQ" toInstance="U:ofeJ2PjuEemkzLxtKg2PjQ"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_22" xsi:type="mapping:TransformationFieldPort" toPorts="ID_21" instance="U:ofeJ2vjuEemkzLxtKg2PjQ" transformationField="U:ofeKDPjuEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_19" xsi:type="mapping:TransformationFieldPort" toPorts="ID_18" instance="U:ofeJ2vjuEemkzLxtKg2PjQ" transformationField="U:ofeKDvjuEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_25" xsi:type="mapping:TransformationFieldPort" toPorts="ID_24" instance="U:ofeJ2vjuEemkzLxtKg2PjQ" transformationField="U:ofeKD_juEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_16" xsi:type="mapping:TransformationFieldPort" toPorts="ID_15" instance="U:ofeJ2vjuEemkzLxtKg2PjQ" transformationField="U:ofeKEPjuEemkzLxtKg2PjQ"/>
+<TransformationFieldPort imx:id="ID_11" xsi:type="mapping:TransformationFieldPort" toPorts="ID_10" instance="U:ofeJ2vjuEemkzLxtKg2PjQ" transformationField="U:ofeKDfjuEemkzLxtKg2PjQ"/>
+</ports>
+</Instance>
+<Instance imx:id="U:ofeJ3PjuEemkzLxtKg2PjQ" xsi:type="mapping:Instance" name="exp_CollectInfo" toOutlineLinks="ID_27" transformation="U:ofeJ4fjuEemkzLxtKg2PjQ">
+<fieldMapSpec imx:id="ID_30" xsi:type="mapping:FieldMapSpec">
+<fieldMapPorts>
+<FieldMapPort imx:id="ID_31" xsi:type="mapping:FieldMapPort" toPorts="ID_32">
+<generatedFieldRef imx:id="ID_33" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="id"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_34" xsi:type="mapping:FieldMapPort" toPorts="ID_35">
+<generatedFieldRef imx:id="ID_36" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="name"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_37" xsi:type="mapping:FieldMapPort" toPorts="ID_38">
+<generatedFieldRef imx:id="ID_39" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="definition"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_40" xsi:type="mapping:FieldMapPort" toPorts="ID_41">
+<generatedFieldRef imx:id="ID_42" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="refNumber"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_43" xsi:type="mapping:FieldMapPort" toPorts="ID_44">
+<generatedFieldRef imx:id="ID_45" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="type"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_46" xsi:type="mapping:FieldMapPort" toPorts="ID_47">
+<generatedFieldRef imx:id="ID_48" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="axonStatus"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_49" xsi:type="mapping:FieldMapPort" toPorts="ID_50">
+<generatedFieldRef imx:id="ID_51" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="lifecycle"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_52" xsi:type="mapping:FieldMapPort" toPorts="ID_53">
+<generatedFieldRef imx:id="ID_54" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="systemId"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_55" xsi:type="mapping:FieldMapPort" toPorts="ID_56">
+<generatedFieldRef imx:id="ID_57" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="systemName"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_58" xsi:type="mapping:FieldMapPort" toPorts="ID_59">
+<generatedFieldRef imx:id="ID_60" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="glossaryId"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_61" xsi:type="mapping:FieldMapPort" toPorts="ID_62">
+<generatedFieldRef imx:id="ID_63" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="glossaryName"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_64" xsi:type="mapping:FieldMapPort" toPorts="ID_65">
+<generatedFieldRef imx:id="ID_66" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="createdDate"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_67" xsi:type="mapping:FieldMapPort" toPorts="ID_68">
+<generatedFieldRef imx:id="ID_69" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="lastUpdatedDate"/>
+</FieldMapPort>
+<FieldMapPort imx:id="ID_70" xsi:type="mapping:FieldMapPort" toPorts="ID_71">
+<generatedFieldRef imx:id="ID_72" xsi:type="transformation:GeneratedFieldRef" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ" fieldName="accessControl"/>
+</FieldMapPort>
+</fieldMapPorts>
+</fieldMapSpec>
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_73" xsi:type="mapping:OutlineLink" fromInstance="U:ofeJ3PjuEemkzLxtKg2PjQ" toInstance="U:8e1wL_jwEemkzLxtKg2PjQ"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_29" xsi:type="mapping:TransformationFieldPort" fromPort="ID_28" instance="U:ofeJ3PjuEemkzLxtKg2PjQ" transformationField="U:BR6Bo_jyEemkzLxtKg2PjQ"/>
+</ports>
+</Instance>
+<Instance imx:id="U:8e1wL_jwEemkzLxtKg2PjQ" xsi:type="mapping:Instance" name="Write_DQR_STG_AXON_DATASET" toOutlineLinks="ID_73" transformation="U:8e1wMPjwEemkzLxtKg2PjQ">
+<ports>
+<TransformationFieldPort imx:id="ID_74" xsi:type="mapping:TransformationFieldPort" instance="U:8e1wL_jwEemkzLxtKg2PjQ" transformationField="U:8e1wM_jwEemkzLxtKg2PjQ">
+<children>
+<NestedPort imx:id="ID_32" xsi:type="mapping:NestedPort" fromPort="ID_31" parent="ID_74" structuralFeature="U:8e1wN_jwEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_35" xsi:type="mapping:NestedPort" fromPort="ID_34" parent="ID_74" structuralFeature="U:8e1wOPjwEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_38" xsi:type="mapping:NestedPort" fromPort="ID_37" parent="ID_74" structuralFeature="U:8e1wOfjwEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_41" xsi:type="mapping:NestedPort" fromPort="ID_40" parent="ID_74" structuralFeature="U:BR6BmvjyEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_44" xsi:type="mapping:NestedPort" fromPort="ID_43" parent="ID_74" structuralFeature="U:8e1wO_jwEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_47" xsi:type="mapping:NestedPort" fromPort="ID_46" parent="ID_74" structuralFeature="U:BR6Bm_jyEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_50" xsi:type="mapping:NestedPort" fromPort="ID_49" parent="ID_74" structuralFeature="U:8e1wPfjwEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_53" xsi:type="mapping:NestedPort" fromPort="ID_52" parent="ID_74" structuralFeature="U:BR6BnPjyEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_56" xsi:type="mapping:NestedPort" fromPort="ID_55" parent="ID_74" structuralFeature="U:BR6BnfjyEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_59" xsi:type="mapping:NestedPort" fromPort="ID_58" parent="ID_74" structuralFeature="U:BR6BnvjyEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_62" xsi:type="mapping:NestedPort" fromPort="ID_61" parent="ID_74" structuralFeature="U:BR6Bn_jyEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_65" xsi:type="mapping:NestedPort" fromPort="ID_64" parent="ID_74" structuralFeature="U:BR6BoPjyEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_68" xsi:type="mapping:NestedPort" fromPort="ID_67" parent="ID_74" structuralFeature="U:BR6BofjyEemkzLxtKg2PjQ"/>
+<NestedPort imx:id="ID_71" xsi:type="mapping:NestedPort" fromPort="ID_70" parent="ID_74" structuralFeature="U:BR6BovjyEemkzLxtKg2PjQ"/>
+</children>
+</TransformationFieldPort>
+</ports>
+</Instance>
+</instances>
+<transformations>
+<AbstractTransformation imx:id="U:ofeJ3fjuEemkzLxtKg2PjQ" xsi:type="expression:ExpressionTx" name="Exp_Add_Fields">
+<expressionInterface>
+<ExpressionDataInterface imx:id="U:ofexOvjuEemkzLxtKg2PjQ" xsi:type="expression:ExpressionDataInterface" input="true" name="Group" output="true">
+<expressionFields>
+<ExpressionField imx:id="U:ofexO_juEemkzLxtKg2PjQ" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="JSON_val" output="true" expression="%27dataset%27">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</ExpressionField>
+<ExpressionField imx:id="U:ofexPPjuEemkzLxtKg2PjQ" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="ContentType" output="true" expression="ContentType"/>
+<ExpressionField imx:id="U:ofexPfjuEemkzLxtKg2PjQ" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="LoginURL" output="true" expression="LoginURL"/>
+<ExpressionField imx:id="U:ofexP_juEemkzLxtKg2PjQ" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="RealURL" output="true" expression="RealURL"/>
+<ExpressionField imx:id="U:ofexQPjuEemkzLxtKg2PjQ" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Username" output="true" expression="Username"/>
+<ExpressionField imx:id="U:ofexQfjuEemkzLxtKg2PjQ" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Password" output="true" expression="Password"/>
+</expressionFields>
+</ExpressionDataInterface>
+</expressionInterface>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:ofeJ3vjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaTx" active="true" name="java_Axon" tracing="verboseData" transformationConfiguration="smd:com.informatica.extensions.transformation.seed.JavaTx.configuration" byteCode="yv66vgAAADQB%2FwoAoQDgBwDhCgACAOAJAKAA4gcA4woABQDgCADkCgAFAOUKAAUA5goAoADnCADoCQCgAOkKAJ0A6goAnQDrCADsCgCdAO0IAO4KAJ0A7wcA8AgA8QoAhwDyCADzCgCgAPQIAPUKAJ0A9goAnQD3CAD4CgCdAPkKAJ0A%2BgoAnQD7CgCdAPwIAP0IAP4KAJ0A%2FwkAoAEACAEBCgArAQIKAAUBAwgBBAoAKwEFCwEGAQcLAQYBCAcBCQkAoAEKCAELCgArAOYKAKABDAoAhwENEgAAARILARMBFAsBFQEWBwEXCgA0ARgJAKABGQoAoAEaCAEbCgCgARwJAKABHQoBHgEfBwEhCgA0ASQIASUIASYIAScIASgIASkIALAKAKABKggAsggAswgAtAgAtQgAtggAtwgAuAgAuQgAuggAuwgAvAgAvQgAvgoAoAErCgCgASwHAS0JAKABLgoBLwEwCQCgATEJAKABMgkAoAEzCQCgATQJAKABNQkAoAE2CQCgATcJAKABOAkAoAE5CQCgAToJAKABOwkAoAE8CQCgAT0JAKABPgkAoAE%2FCgEvAUAKAAIBQQoBLwFCCgACAOYJAKABQwkBRAFFCgFEAUYJAKABRwoBSAFJCQCgAUoHAUsKAUgBTAoBTQFOCQCgAU8IAVAKAKABUQgBUgoAoAFTCAFUCQCgAVUHAVYJAKABVwoAegFYCQFEAVkJAKABWgkBWwFcCgCgAV0HAV4KAKABXwoAoAFgCQCgAWEJAUQBYgoAKwEWBwFjCgCgAWQJAUQBZQkBRAFmCQFEAWcKAKABaAkAoAFpCgBUAWoKAFQBawcBbAoAoAFtCgCgAW4KAKABbwoAoAFwCgFxAXIIAXMKAXEBdAoABQF1CQCgAXYHAXcKAJoA4AkAoAF4BwF5CgCdAOAKACsA4AcBegcBewEACWNvdW50Um93cwEAAUkBAARsb2NrAQASTGphdmEvbGFuZy9PYmplY3Q7AQAJaW5wdXRSb3dzAQAIYXhvbkNhbGwBABhMbmwvamFjYmVla2Vycy9BeG9uQ2FsbDsBAAhheG9uRGF0YQEAFUxqYXZhL3V0aWwvQXJyYXlMaXN0OwEACVNpZ25hdHVyZQEAQExqYXZhL3V0aWwvQXJyYXlMaXN0PExqYXZhL3V0aWwvQXJyYXlMaXN0PExqYXZhL2xhbmcvU3RyaW5nOz47PjsBAAhtYXhJbkxvZwEABnN0ckJ1ZgEAGExqYXZhL2xhbmcvU3RyaW5nQnVmZmVyOwEAAmlkAQASTGphdmEvbGFuZy9TdHJpbmc7AQAEbmFtZQEACmRlZmluaXRpb24BAAlyZWZOdW1iZXIBAAR0eXBlAQAKYXhvblN0YXR1cwEACWxpZmVjeWNsZQEACHN5c3RlbUlkAQAKc3lzdGVtTmFtZQEACmdsb3NzYXJ5SWQBAAxnbG9zc2FyeU5hbWUBAAtjcmVhdGVkRGF0ZQEAD2xhc3RVcGRhdGVkRGF0ZQEADWFjY2Vzc0NvbnRyb2wBAAY8aW5pdD4BAAMoKVYBAARDb2RlAQAPTGluZU51bWJlclRhYmxlAQAIY2FsbEF4b24BAF0oTGphdmEvbGFuZy9TdHJpbmc7TGphdmEvbGFuZy9TdHJpbmc7TGphdmEvbGFuZy9TdHJpbmc7TGphdmEvbGFuZy9TdHJpbmc7TGphdmEvbGFuZy9TdHJpbmc7KVYBAA1TdGFja01hcFRhYmxlBwFjBwF8BwEJAQAKRXhjZXB0aW9ucwEAFnJlbW92ZU5vbkJNUENoYXJhY3RlcnMBACYoTGphdmEvbGFuZy9TdHJpbmc7KUxqYXZhL2xhbmcvU3RyaW5nOwEABGluaXQBACMoTGphdmEvdXRpbC9MaXN0O0xqYXZhL3V0aWwvTGlzdDspVgcBFwEAB2V4ZWN1dGUBAGsoTGNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvcmVwb3NpdG9yeS9JR3JvdXA7TGNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvc2VydmVyL0lJbnB1dEJ1ZmZlcjspVgcBegcBfQcBfgcBXgEAD2VvZk5vdGlmaWNhdGlvbgEANihMY29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3Nkay9yZXBvc2l0b3J5L0lHcm91cDspVgEAEGlucHV0VHJhbnNhY3Rpb24BAAQoSSlWAQALZ2VuZXJhdGVSb3cHAWwBAB9sYW1iZGEkcmVtb3ZlTm9uQk1QQ2hhcmFjdGVycyQwAQAdKExqYXZhL2xhbmcvU3RyaW5nQnVpbGRlcjtJKVYBAAg8Y2xpbml0PgEAClNvdXJjZUZpbGUBAB5KVFhQYXJ0aXRpb25Ecml2ZXJJbXBsR2VuLmphdmEMAL8AwAEAFmphdmEvbGFuZy9TdHJpbmdCdWZmZXIMAK4ArwEAF2phdmEvbGFuZy9TdHJpbmdCdWlsZGVyAQAGVVJMIDogDAF%2FAYAMAYEBggwBgwGEAQALbWFpbkZhY2V0OiAMAKcAqAwBhQGEDAGGAYcBABBMb2dpbiByZXR1cm5lZDogDAGIAYIBABhMb2dpbiBtZXNzYWdlIHJldHVybmVkOiAMAYkBggEAF25sL2phY2JlZWtlcnMvQ29uc3RhbnRzAQACT0sMAYoBiwEADUxvZ2luIGZhaWxlZC4MAYwBhAEABzEwMDAwMDAMAY0BhAwBjgGEAQAKcXVlcnlVUkw6IAwBjwGCDAGQAYQMAZEBggwBkgDAAQAQUXVlcnkgcmV0dXJuZWQ6IAEAGFF1ZXJ5IHJldHVybmVkIG1lc3NhZ2U6IAwBkwGUDACpAKoBABNheG9uRGF0YSBjb250YWlucyA%2BDAGVAZYMAX8BlwEACjwgcmVjb3Jkcy4MAZgBmQcBfAwBmgGbDAGcAZ0BABNqYXZhL3V0aWwvQXJyYXlMaXN0DACtAKMBAAtyZWNvcmQgaXM6IAwAygDLDAGeAZ8BABBCb290c3RyYXBNZXRob2RzDwYBoBAA2A8GAaEMAaIBowcBpAwBpQGmBwGnDAGoAakBADJjb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2RrL3NlcnZlci9JQnVmZmVySW5pdAwBqgGWDAGrAKMMAawAwAEAC0NvbnRlbnRUeXBlDAGtAa4MAa8BsAcBsQwBsgGbBwGzAQA7Y29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3Nkay9yZXBvc2l0b3J5L0lGaWVsZCRKRGF0YVR5cGUBAAlKRGF0YVR5cGUBAAxJbm5lckNsYXNzZXMMAbQBtQEACEpTT05fdmFsAQAIbG9naW5VUkwBAAhxdWVyeVVSTAEACHVzZXJuYW1lAQAIcGFzc3dvcmQMAbYBrgwBtwG4DAG5AboBADRjb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2RrL3NlcnZlci9JT3V0cHV0QnVmZmVyDAG7AbwHAX4MAb0BlgwBvgCjDACwALEMALIAsQwAswCxDAC0ALEMALUAsQwAtgCxDAC3ALEMALgAsQwAuQCxDAC6ALEMALsAsQwAvACxDAC9ALEMAL4AsQwBvwHADAHBANgMAcIBwwwBxAHFBwHGDAHHAcgMAckBygwBywHMBwHNDAHOAYIMAc8AsQEAM2NvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvc2VydmVyL0VMb2dNc2dMZXZlbAwB0AGCBwHRDAHSAdMMAKYAowEAGlByb2Nlc3NpbmcgQXhvbiByZXF1ZXN0Li4uDADDAMQBAGRNb3JlIHRoYW4gMSBpbnB1dCByb3cuIFRoaXMgaXMgdW5leHBlY3RlZCBhcyB0aGVyZSBzaG91bGQgb25seSBiZSBvbmUgcmVjb3JkIHdpdGggY29ubmVjdGl2aXR5IGluZm8uDAHUAYQBAAtVc2FnZSBlcnJvcgwB1QHFAQA4Y29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3NlcnZlci9qdHgvSlRYRmF0YWxFeGNlcHRpb24MAdYAsQwAvwGEDAHXAcgMAdgB2QcB2gwB2wHZDAHcAMABACxjb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2RrL1NES0V4Y2VwdGlvbgwB3QHeDAHfAMAMAeABxQwB4QHIAQAQamF2YS9sYW5nL1N0cmluZwwA2QDADAHiAcgMAeMByAwB5AHIDAHlAa4MAeYAowwB5wG1DAHoAekBAD1jb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2RrL3NlcnZlci9EYXRhVHJ1bmNhdGVkRXhjZXB0aW9uDAHqAYQMAesAwAwB7ADADAHtAMAHAe4MAe8B8AEAAT8MAfEB8gwBfwHzDACiAKMBABBqYXZhL2xhbmcvT2JqZWN0DACkAKUBABZubC9qYWNiZWVrZXJzL0F4b25DYWxsAQBAY29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3NlcnZlci9qdHgvSlRYUGFydGl0aW9uRHJpdmVySW1wbEdlbgEAQmNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZXJ2ZXIvanR4L0pUWFBhcnRpdGlvbkRyaXZlckltcGxGaXhlZAEAEmphdmEvdXRpbC9JdGVyYXRvcgEAMWNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvcmVwb3NpdG9yeS9JR3JvdXABADNjb20vaW5mb3JtYXRpY2EvcG93ZXJjZW50ZXIvc2RrL3NlcnZlci9JSW5wdXRCdWZmZXIBAAZhcHBlbmQBAC0oTGphdmEvbGFuZy9TdHJpbmc7KUxqYXZhL2xhbmcvU3RyaW5nQnVpbGRlcjsBAAh0b1N0cmluZwEAFCgpTGphdmEvbGFuZy9TdHJpbmc7AQAHbG9nSW5mbwEAFShMamF2YS9sYW5nL1N0cmluZzspVgEAC3NldExvZ2luVVJMAQAFbG9naW4BADgoTGphdmEvbGFuZy9TdHJpbmc7TGphdmEvbGFuZy9TdHJpbmc7KUxqYXZhL2xhbmcvU3RyaW5nOwEADWdldFJlc3VsdENvZGUBABBnZXRSZXN1bHRNZXNzYWdlAQAGZXF1YWxzAQAVKExqYXZhL2xhbmcvT2JqZWN0OylaAQALZmFpbFNlc3Npb24BAAhzZXRMaW1pdAEAC3NldFF1ZXJ5VVJMAQALZ2V0UXVlcnlVUkwBAAxzZXRNYWluRmFjZXQBAAxnZXRNYWluRmFjZXQBAAlxdWVyeUF4b24BABJnZXRBeG9uRGF0YVJlY29yZHMBABcoKUxqYXZhL3V0aWwvQXJyYXlMaXN0OwEABHNpemUBAAMoKUkBABwoSSlMamF2YS9sYW5nL1N0cmluZ0J1aWxkZXI7AQAIaXRlcmF0b3IBABYoKUxqYXZhL3V0aWwvSXRlcmF0b3I7AQAHaGFzTmV4dAEAAygpWgEABG5leHQBABQoKUxqYXZhL2xhbmcvT2JqZWN0OwEACmNvZGVQb2ludHMBAB4oKUxqYXZhL3V0aWwvc3RyZWFtL0ludFN0cmVhbTsKAfQB9QoAoAH2AQAGYWNjZXB0AQA7KExqYXZhL2xhbmcvU3RyaW5nQnVpbGRlcjspTGphdmEvdXRpbC9mdW5jdGlvbi9JbnRDb25zdW1lcjsBABpqYXZhL3V0aWwvc3RyZWFtL0ludFN0cmVhbQEAB2ZvckVhY2gBACMoTGphdmEvdXRpbC9mdW5jdGlvbi9JbnRDb25zdW1lcjspVgEADmphdmEvdXRpbC9MaXN0AQADZ2V0AQAVKEkpTGphdmEvbGFuZy9PYmplY3Q7AQALZ2V0Q2FwYWNpdHkBAAxvdXRwdXRCdWZDYXABAAppbml0aWFsaXplAQAQaXNJbkZsZENvbm5lY3RlZAEAFShMamF2YS9sYW5nL1N0cmluZzspWgEACGp0eFV0aWxzAQAxTGNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZXJ2ZXIvanR4L0pUWFV0aWxzOwEAL2NvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZXJ2ZXIvanR4L0pUWFV0aWxzAQATaXNTZXJ2ZXJVbmljb2RlTW9kZQEAMWNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvcmVwb3NpdG9yeS9JRmllbGQBABJiaW5kQ29sdW1uRGF0YVR5cGUBAAUoSUkpVgEAEWlzT3V0RmxkUHJvamVjdGVkAQAOc2V0SW5wdXRCdWZmZXIBADgoTGNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvc2VydmVyL0lJbnB1dEJ1ZmZlcjspVgEAEGdldE91dHB1dEJ1ZmZlcnMBABIoKUxqYXZhL3V0aWwvTGlzdDsBAAlvdXRwdXRCdWYBADZMY29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3Nkay9zZXJ2ZXIvSU91dHB1dEJ1ZmZlcjsBABNnZXROdW1Sb3dzQXZhaWxhYmxlAQAIaW5Sb3dOdW0BAAZpc051bGwBAAUoSUkpWgEACXNldExlbmd0aAEAD2dldFN0cmluZ0J1ZmZlcgEAHShJSUxqYXZhL2xhbmcvU3RyaW5nQnVmZmVyOylJAQANaXNWZXJib3NlRGF0YQEAAVoBACNjb20vaW5mb3JtYXRpY2EvcHJvZHVjdHMvanR4L0p0eE1zZwEAD0JFR0lOX0lOUFVUX1JPVwEAJUxjb20vaW5mb3JtYXRpY2EvcHJvZHVjdHMvanR4L0p0eE1zZzsBAA5nZXRJbmZhTWVzc2FnZQEATShMY29tL2luZm9ybWF0aWNhL3Byb2R1Y3RzL2p0eC9KdHhNc2c7KUxjb20vaW5mb3JtYXRpY2EvbWVzc2FnZXMvSW5mYU1lc3NhZ2U7AQALdXRpbHNTZXJ2ZXIBADVMY29tL2luZm9ybWF0aWNhL3Bvd2VyY2VudGVyL3Nkay9zZXJ2ZXIvSVV0aWxzU2VydmVyOwEAJGNvbS9pbmZvcm1hdGljYS9tZXNzYWdlcy9JbmZhTWVzc2FnZQEABWdldElkAQAGcHJlZml4AQAKZ2V0TWVzc2FnZQEAM2NvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvc2VydmVyL0lVdGlsc1NlcnZlcgEABmxvZ01zZwEAOihMamF2YS9sYW5nL1N0cmluZztMamF2YS9sYW5nL1N0cmluZztJTGphdmEvbGFuZy9TdHJpbmc7KVYBAAhsb2dFcnJvcgEAFmlzRmF0YWxFeGNlcHRpb25UaHJvd24BAAhmYXRhbE1zZwEADkVYSVRfSU5QVVRfUk9XAQAKdHJhbnNTY29wZQEARExjb20vaW5mb3JtYXRpY2EvbWV0YWRhdGEvY29tbW9uL3RyYW5zZm9ybWF0aW9uL1RyYW5zZm9ybWF0aW9uU2NvcGU7AQBCY29tL2luZm9ybWF0aWNhL21ldGFkYXRhL2NvbW1vbi90cmFuc2Zvcm1hdGlvbi9UcmFuc2Zvcm1hdGlvblNjb3BlAQADcm93AQAIZmx1c2hCdWYBAA9oYW5kbGVFeGNlcHRpb24BADEoTGNvbS9pbmZvcm1hdGljYS9wb3dlcmNlbnRlci9zZGsvU0RLRXhjZXB0aW9uOylWAQAScHJlcGFyZUZvcklucHV0Um93AQAJaXNWZXJib3NlAQARQkVHSU5fRU5EX09GX0RBVEEBABBFWElUX0VORF9PRl9EQVRBAQARQkVHSU5fVFJBTlNBQ1RJT04BABBFWElUX1RSQU5TQUNUSU9OAQAPaXNTZXROdWxsQ2FsbGVkAQAJb3V0Um93TnVtAQAHc2V0TnVsbAEACXNldFN0cmluZwEAFyhJSUxqYXZhL2xhbmcvU3RyaW5nOylWAQAcaGFuZGxlRGF0YVRydW5jYXRlZEV4Y2VwdGlvbgEAGGluY3JlbWVudE91dHB1dFJvd051bWJlcgEAEGZsdXNoQnVmV2hlbkZ1bGwBAA9jbGVhck51bGxDb2xTZXQBABNqYXZhL2xhbmcvQ2hhcmFjdGVyAQAYaXNTdXBwbGVtZW50YXJ5Q29kZVBvaW50AQAEKEkpWgEAB3RvQ2hhcnMBAAUoSSlbQwEAHShbQylMamF2YS9sYW5nL1N0cmluZ0J1aWxkZXI7BwH3DAH4AfsMANsA3AEAImphdmEvbGFuZy9pbnZva2UvTGFtYmRhTWV0YWZhY3RvcnkBAAttZXRhZmFjdG9yeQcB%2FQEABkxvb2t1cAEAzChMamF2YS9sYW5nL2ludm9rZS9NZXRob2RIYW5kbGVzJExvb2t1cDtMamF2YS9sYW5nL1N0cmluZztMamF2YS9sYW5nL2ludm9rZS9NZXRob2RUeXBlO0xqYXZhL2xhbmcvaW52b2tlL01ldGhvZFR5cGU7TGphdmEvbGFuZy9pbnZva2UvTWV0aG9kSGFuZGxlO0xqYXZhL2xhbmcvaW52b2tlL01ldGhvZFR5cGU7KUxqYXZhL2xhbmcvaW52b2tlL0NhbGxTaXRlOwcB%2FgEAJWphdmEvbGFuZy9pbnZva2UvTWV0aG9kSGFuZGxlcyRMb29rdXABAB5qYXZhL2xhbmcvaW52b2tlL01ldGhvZEhhbmRsZXMAIQCgAKEAAAAVAAgAogCjAAAACACkAKUAAAAIAKYAowAAAAgApwCoAAAACACpAKoAAQCrAAAAAgCsAAgArQCjAAAAAgCuAK8AAAACALAAsQAAAAIAsgCxAAAAAgCzALEAAAACALQAsQAAAAIAtQCxAAAAAgC2ALEAAAACALcAsQAAAAIAuACxAAAAAgC5ALEAAAACALoAsQAAAAIAuwCxAAAAAgC8ALEAAAACAL0AsQAAAAIAvgCxAAAACgABAL8AwAABAMEAAAAsAAMAAQAAABAqtwABKrsAAlm3AAO1AASxAAAAAQDCAAAACgACAAAAPgAEAIcAAADDAMQAAgDBAAACQgAEAAsAAAGdKrsABVm3AAYSB7YACCu2AAi2AAm2AAorOgYtOgcquwAFWbcABhILtgAIGQe2AAi2AAm2AAqyAAwstgANsgAMGQQZBbYADlcquwAFWbcABhIPtgAIsgAMtgAQtgAItgAJtgAKKrsABVm3AAYSEbYACLIADLYAErYACLYACbYAChIUsgAMtgAQtgAVmgAJKhIWtgAXsgAMEhi2ABmyAAwZBrYAGiq7AAVZtwAGEhu2AAiyAAy2ABy2AAi2AAm2AAqyAAwZB7YAHSq7AAVZtwAGEgu2AAiyAAy2AB62AAi2AAm2AAqyAAy2AB8quwAFWbcABhIgtgAIsgAMtgAQtgAItgAJtgAKKrsABVm3AAYSIbYACLIADLYAErYACLYACbYACrIADLYAIrMAIyq7AAVZtwAGEiS2AAiyACO2ACW2ACYSJ7YACLYACbYACgM2CLIAI7YAKDoJGQm5ACkBAJkAPxkJuQAqAQDAACs6CoQIARUIsgAspAAGpwAlKrsABVm3AAYSLbYACCoZCrYALrcAL7YACLYACbYACqf%2FvbEAAAACAMIAAAByABwAAABQABcAUQAaAFIAHQBTADUAVgA8AFcARwBYAGMAWQB%2FAFsAjQBcAJMAXwCbAGAAowBhAL8AYgDHAGMA4wBlAOkAZwEFAGgBIQBqASoAbAFLAG0BTgBuAWwAbwFvAHABdwBxAXoAcwGZAHQBnAB2AMUAAAAbAAT9AJMHAMYHAMb9AMIBBwDH%2FAAjBwDI%2BQAhAMkAAAAEAAEAgQACAMoAywABAMEAAAA8AAIAAwAAABy7AAVZtwAGTSu2ADAsugAxAAC5ADICACy2AAmwAAAAAQDCAAAADgADAAAAeQAIAHoAFwCBAAEAzADNAAIAwQAABK0AAwAFAAADDSsDuQAzAgDAADROLAO5ADMCAMAANDoEKhkEtgA1tQA2KrYANyoSOLYAOZkAHSq0ADq2ADuZAA0tAxAHtgA9pwAJLQMItgA9KhI%2BtgA5mQAdKrQAOrYAO5kADS0EEAe2AD2nAAktBAi2AD0qEj%2B2ADmZAB0qtAA6tgA7mQANLQUQB7YAPacACS0FCLYAPSoSQLYAOZkAHSq0ADq2ADuZAA0tBhAHtgA9pwAJLQYItgA9KhJBtgA5mQAdKrQAOrYAO5kADS0HEAe2AD2nAAktBwi2AD0qEkK2ADmZAB0qtAA6tgA7mQANLQgQB7YAPacACS0ICLYAPSoSQ7YARJkAHyq0ADq2ADuZAA4ZBAMQB7YAPacAChkEAwi2AD0qEkW2AESZAB8qtAA6tgA7mQAOGQQEEAe2AD2nAAoZBAQItgA9KhJGtgBEmQAfKrQAOrYAO5kADhkEBRAHtgA9pwAKGQQFCLYAPSoSR7YARJkAHyq0ADq2ADuZAA4ZBAYQB7YAPacAChkEBgi2AD0qEki2AESZAB8qtAA6tgA7mQAOGQQHEAe2AD2nAAoZBAcItgA9KhJJtgBEmQAfKrQAOrYAO5kADhkECBAHtgA9pwAKGQQICLYAPSoSSrYARJkAISq0ADq2ADuZAA8ZBBAGEAe2AD2nAAsZBBAGCLYAPSoSS7YARJkAISq0ADq2ADuZAA8ZBBAHEAe2AD2nAAsZBBAHCLYAPSoSTLYARJkAISq0ADq2ADuZAA8ZBBAIEAe2AD2nAAsZBBAICLYAPSoSTbYARJkAISq0ADq2ADuZAA8ZBBAJEAe2AD2nAAsZBBAJCLYAPSoSTrYARJkAISq0ADq2ADuZAA8ZBBAKEAe2AD2nAAsZBBAKCLYAPSoST7YARJkAISq0ADq2ADuZAA8ZBBALEAe2AD2nAAsZBBALCLYAPSoSULYARJkAISq0ADq2ADuZAA8ZBBAMEAe2AD2nAAsZBBAMCLYAPSoSUbYARJkAISq0ADq2ADuZAA8ZBBANEAe2AD2nAAsZBBANCLYAPbEAAAACAMIAAAFWAFUAAACfAAsAoAAXAKEAIACiACQApAAtAKYANwCnAEEAqQBHAKwAUACuAFoArwBkALEAagC0AHMAtgB9ALcAhwC5AI0AvACWAL4AoAC%2FAKoAwQCwAMQAuQDGAMMAxwDNAMkA0wDMANwAzgDmAM8A8ADRAPYA1AD%2FANYBCQDXARQA2QEbANwBJADeAS4A3wE5AOEBQADkAUkA5gFTAOcBXgDpAWUA7AFuAO4BeADvAYMA8QGKAPQBkwD2AZ0A9wGoAPkBrwD8AbgA%2FgHCAP8BzQEBAdQBBAHdAQYB5wEHAfMBCQH7AQwCBAEOAg4BDwIaARECIgEUAisBFgI1ARcCQQEZAkkBHAJSAR4CXAEfAmgBIQJwASQCeQEmAoMBJwKPASkClwEsAqABLgKqAS8CtgExAr4BNALHATYC0QE3At0BOQLlATwC7gE%2BAvgBPwMEAUEDDAFDAMUAAAAyACj9AEEHAM4HAM4FHAUcBRwFHAUcBR0GHQYdBh0GHQYdBh4HHgceBx4HHgceBx4HHgcAyQAAAAQAAQCBAAEAzwDQAAIAwQAABCUABgANAAACbiostgBSKiq2AFMDuQAzAgDAAFS1AFUstgBWPioDtQBXBDYLFQsdowJHKgG1AFgqAbUAWSoBtQBaKgG1AFsqAbUAXCoBtQBdKgG1AF4qAbUAXyoBtQBgKgG1AGEqAbUAYioBtQBjKgG1AGQqAbUAZQE6BQE6BgE6BwE6CAE6CQE6CioSOLYAOZkALiwqtABXA7YAZpoAIiq0AAQDtgBnLCq0AFcDKrQABLYAaFcqtAAEtgBpOgUqEj62ADmZAC4sKrQAVwS2AGaaACIqtAAEA7YAZywqtABXBCq0AAS2AGhXKrQABLYAaToGKhI%2FtgA5mQAuLCq0AFcFtgBmmgAiKrQABAO2AGcsKrQAVwUqtAAEtgBoVyq0AAS2AGk6ByoSQLYAOZkALiwqtABXBrYAZpoAIiq0AAQDtgBnLCq0AFcGKrQABLYAaFcqtAAEtgBpOggqEkG2ADmZAC4sKrQAVwe2AGaaACIqtAAEA7YAZywqtABXByq0AAS2AGhXKrQABLYAaToJKhJCtgA5mQAuLCq0AFcItgBmmgAiKrQABAO2AGcsKrQAVwgqtAAEtgBoVyq0AAS2AGk6Ciq0AGqZACKyAGu4AGw6DCq0AG0ZDLYAbiq0AG8QCBkMtgBxtgBysgBzBGCzAHOyAHMEoAAaKhJ0tgAKKhkIGQcZBhkJGQq2AHWnAA8qEna2AHcqEni2ABcqtAB5mQAPuwB6WSq0AHu3AHy%2FKrQAapkAIrIAfbgAbDoMKrQAbRkMtgBuKrQAbxAIGQy2AHG2AHIqtAB%2BsgB%2FpgAHKrYAgKcACzoMKhkMtgCCKrYAg4QLAaf9ubEAAQApAlgCWwCBAAIAwgAAAR4ARwAAAU0ABQFOABYBTwAbAVAAIAFaACkBXwAuAWAAMwFhADgBYgA9AWMAQgFkAEcBZQBMAWYAUQFnAFYBaABbAWkAYAFqAGUBawBqAWwAbwFvAHIBcAB1AXEAeAFyAHsBcwB%2BAXQAgQF3AJYBeQCeAXoArAF7ALUBfgDKAYAA0gGBAOABggDpAYUA%2FgGHAQYBiAEUAYkBHQGMATIBjgE6AY8BSAGQAVEBkwFmAZUBbgGWAXwBlwGFAZoBmgGcAaIBnQGwAZ4BuQGhAcABowHIAaQB3wGoAecBqQHuAaoB9AGrAgUBrQILAa4CEQG1AhgBtwIkAboCKwG8AjMBvQJKAcACVAHCAlgByQJbAcYCXQHIAmMBygJnAVoCbQHMAMUAAAB5ABD%2FACMADAcA0QcA0gcA0wEAAAAAAAAAAQAA%2FwCRAAwHANEHANIHANMBAAcAxgcAxgcAxgcAxgcAxgcAxgEAADMzMzMzJSULEiUN%2FwACAAwHANEHANIHANMBAAAAAAAAAAEAAQcA1Af%2FAAkABAcA0QcA0gcA0wEAAADJAAAABAABAIEAAQDVANYAAgDBAAACTQAFAAUAAAGCKrQAVccAFCoqtgBTA7kAMwIAwABUtQBVKrQAhJkAH7IAhbgAbE0qtABtLLYAbiq0AG8QCCy2AHG2AHIquwAFWbcABhIktgAIsgAjtgAltgAmEie2AAi2AAm2AAoDPbIAI7YAKE4tuQApAQCZANMtuQAqAQDAACs6BCoZBAO2AIbAAIe1AFgqGQQEtgCGwACHtQBZKhkEBbYAhsAAh7UAWioZBAa2AIbAAIe1AFsqGQQHtgCGwACHtQBcKhkECLYAhsAAh7UAXSoZBBAGtgCGwACHtQBeKhkEEAe2AIbAAIe1AF8qGQQQCLYAhsAAh7UAYCoZBBAJtgCGwACHtQBhKhkEEAq2AIbAAIe1AGIqGQQQC7YAhsAAh7UAYyoZBBAMtgCGwACHtQBkKhkEEA22AIbAAIe1AGUqtwCIp%2F8qKrQAeZkAD7sAelkqtAB7twB8vyq0AISZAB%2ByAIm4AGxOKrQAbS22AG4qtABvEAgttgBxtgByKrYAgKcACU0qLLYAgrEAAQAAAXgBewCBAAIAwgAAAIoAIgAAAdcABwHZABgB3AAfAd4AJgHfADsB5QBcAeYAXgHnAHkB6ACGAekAkwHqAKAB6wCtAewAugHtAMcB7gDVAe8A4wHwAPEB8QD%2FAfIBDQHzARsB9AEpAfUBNwH3ATsB%2BQE%2BAf0BRQH%2FAVECAQFYAgMBXwIEAXQCBgF4AgsBewIIAXwCCgGBAgwAxQAAACEACBgi%2FQApAQcAx%2FoA2BIi%2FwAGAAIHANEHANIAAQcA1AUAyQAAAAQAAQCBAAEA1wDYAAIAwQAAANwABQADAAAAeCq0AISZAB%2ByAIq4AGxNKrQAbSy2AG4qtABvEAgstgBxtgByKrQAeZkAD7sAelkqtAB7twB8vyq0AISZAB%2ByAIu4AGxNKrQAbSy2AG4qtABvEAgstgBxtgByKrYAgCoqtgBTA7kAMwIAwABUtQBVpwAJTSostgCCsQABAAAAbgBxAIEAAgDCAAAAOgAOAAACGAAHAhoADgIbACMCIwAqAiUANgInAD0CKQBEAioAWQIsAF0CLQBuAjIAcQIvAHICMQB3AjMAxQAAAAoABSMSIlcHANQFAMkAAAAEAAEAgQACANkAwAACAMEAAAYxAAQAAgAAA7kqEkO2AESZADwqEkO2AIyaADMqtABYxwASKrQAVSq0AI0DtgCOpwAdKrQAVSq0AI0DKrQAWLYAj6cACkwqEkO2AJEqEkW2AESZADwqEkW2AIyaADMqtABZxwASKrQAVSq0AI0EtgCOpwAdKrQAVSq0AI0EKrQAWbYAj6cACkwqEkW2AJEqEka2AESZADwqEka2AIyaADMqtABaxwASKrQAVSq0AI0FtgCOpwAdKrQAVSq0AI0FKrQAWrYAj6cACkwqEka2AJEqEke2AESZADwqEke2AIyaADMqtABbxwASKrQAVSq0AI0GtgCOpwAdKrQAVSq0AI0GKrQAW7YAj6cACkwqEke2AJEqEki2AESZADwqEki2AIyaADMqtABcxwASKrQAVSq0AI0HtgCOpwAdKrQAVSq0AI0HKrQAXLYAj6cACkwqEki2AJEqEkm2AESZADwqEkm2AIyaADMqtABdxwASKrQAVSq0AI0ItgCOpwAdKrQAVSq0AI0IKrQAXbYAj6cACkwqEkm2AJEqEkq2AESZAD4qEkq2AIyaADUqtABexwATKrQAVSq0AI0QBrYAjqcAHiq0AFUqtACNEAYqtABetgCPpwAKTCoSSrYAkSoSS7YARJkAPioSS7YAjJoANSq0AF%2FHABMqtABVKrQAjRAHtgCOpwAeKrQAVSq0AI0QByq0AF%2B2AI%2BnAApMKhJLtgCRKhJMtgBEmQA%2BKhJMtgCMmgA1KrQAYMcAEyq0AFUqtACNEAi2AI6nAB4qtABVKrQAjRAIKrQAYLYAj6cACkwqEky2AJEqEk22AESZAD4qEk22AIyaADUqtABhxwATKrQAVSq0AI0QCbYAjqcAHiq0AFUqtACNEAkqtABhtgCPpwAKTCoSTbYAkSoSTrYARJkAPioSTrYAjJoANSq0AGLHABMqtABVKrQAjRAKtgCOpwAeKrQAVSq0AI0QCiq0AGK2AI%2BnAApMKhJOtgCRKhJPtgBEmQA%2BKhJPtgCMmgA1KrQAY8cAEyq0AFUqtACNEAu2AI6nAB4qtABVKrQAjRALKrQAY7YAj6cACkwqEk%2B2AJEqElC2AESZAD4qElC2AIyaADUqtABkxwATKrQAVSq0AI0QDLYAjqcAHiq0AFUqtACNEAwqtABktgCPpwAKTCoSULYAkSoSUbYARJkAPioSUbYAjJoANSq0AGXHABMqtABVKrQAjRANtgCOpwAeKrQAVSq0AI0QDSq0AGW2AI%2BnAApMKhJRtgCRKrYAkiq2AJMqtgCUsQAOACgAOAA7AJAAagB6AH0AkACsALwAvwCQAO4A%2FgEBAJABMAFAAUMAkAFyAYIBhQCQAbUBxgHJAJAB%2BQIKAg0AkAI9Ak4CUQCQAoECkgKVAJACxQLWAtkAkAMJAxoDHQCQA00DXgNhAJADkQOiA6UAkAACAMIAAAGaAGYAAAI9ABICPwAZAkAAKAJFADgCSgA7AkcAPAJJAEICTgBUAlAAWwJRAGoCVgB6AlsAfQJYAH4CWgCEAl8AlgJhAJ0CYgCsAmcAvAJsAL8CaQDAAmsAxgJwANgCcgDfAnMA7gJ4AP4CfQEBAnoBAgJ8AQgCgQEaAoMBIQKEATACiQFAAo4BQwKLAUQCjQFKApIBXAKUAWMClQFyApoBggKfAYUCnAGGAp4BjAKjAZ4CpQGlAqYBtQKrAcYCsAHJAq0BygKvAdACtAHiArYB6QK3AfkCvAIKAsECDQK%2BAg4CwAIUAsUCJgLHAi0CyAI9As0CTgLSAlECzwJSAtECWALWAmoC2AJxAtkCgQLeApIC4wKVAuAClgLiApwC5wKuAukCtQLqAsUC7wLWAvQC2QLxAtoC8wLgAvgC8gL6AvkC%2BwMJAwADGgMFAx0DAgMeAwQDJAMJAzYDCwM9AwwDTQMRA14DFgNhAxMDYgMVA2gDGgN6AxwDgQMdA5EDIgOiAycDpQMkA6YDJgOsAyoDsAMrA7QDLAO4Ay0AxQAAAFYAKihSBwDaBidSBwDaBidSBwDaBidSBwDaBidSBwDaBidSBwDaBihTBwDaBihTBwDaBihTBwDaBihTBwDaBihTBwDaBihTBwDaBihTBwDaBihTBwDaBgDJAAAABAABAIEQCgDbANwAAQDBAAAASQACAAIAAAAbG7gAlZkADSoSlrYACFenAAwqG7gAl7YAmFexAAAAAgDCAAAAEgAEAAAAewAHAHwAEQB%2BABoAgADFAAAABAACEQgACADdAMAAAQDBAAAAWAACAAAAAAAsA7MAmbsAmlm3AJuzAJwDswBzuwCdWbcAnrMADLsAK1m3AJ%2BzACMQZLMALLEAAAABAMIAAAAaAAYAAABCAAQAQwAOAEUAEgBHABwASAAmAEoAAwDeAAAAAgDfASMAAAASAAIAPAEgASIACQH5AfwB%2BgAZAQ4AAAAMAAEBDwADARABEQEQ" byteCodeLen="12537" checkSum="1582041939" classPath="C:%5CUsers%5CC62760%5COneDrive+-+ABN+AMRO%5CGitRepos%5Caxon2relational%5Clib%5Cgson-2.8.6.jar%3BC:%5CUsers%5CC62760%5COneDrive+-+ABN+AMRO%5CGitRepos%5Caxon2relational%5Clib%5Clog4j-1.2.17.jar%3BC:%5CUsers%5CC62760%5COneDrive+-+ABN+AMRO%5CGitRepos%5Caxon2relational%5Ctarget%5Caxon2relational-0.2-SNAPSHOT.jar" helperCodeSnippet="static+int+countRows+%3D0%3B+%0Astatic+Object+lock+%3D+new+Object%28%29%3B+++%2F%2F+lock+to+synchronize+countNullRows%0A%0Astatic+int+inputRows%3D0%3B%0A%0Astatic+AxonCall+axonCall+%3D+new+AxonCall%28%29%3B%0Astatic+ArrayList%3CArrayList%3CString%3E%3E+axonData+%3D+new+ArrayList%3CArrayList%3CString%3E%3E%28%29%3B%0A%0Astatic++++++++int+maxInLog+%3D+100%3B%0A" importPackagesSnippet="%2F%2F+ToDo:+Enter+the+Java+packages+to+be++imported+here%0A%2F%2F+For+example%2C+if+you+want+to+use+Hashtable+in+any+of+the+snippets%2C+import+the+Hashtable+%2F%2F+as+shown+below:%0A+%2F%2F+%0A%2F%2F+import+java.util.Hashtable%3B%0Aimport+nl.jacbeekers.%2A%3B%0Aimport+org.apache.log4j.Logger%3B%0A%0Aimport+java.io.%2A%3B%0Aimport+java.net.HttpURLConnection%3B%0Aimport+java.net.URL%3B%0Aimport+java.text.SimpleDateFormat%3B%0Aimport+java.util.ArrayList%3B%0Aimport+java.util.Date%3B%0A%0Aimport+com.google.gson.Gson%3B%0A%0Aimport+static+java.net.HttpURLConnection.HTTP_OK%3B%0A+%0A%0A%0A" infaFunctionsSnippet="void+callAxon%28String+URL%2C+String+loginURL%2C+String+JSON_val%2C+String+username%2C+String+password%29+throws+SDKException+%7B%0D%0A+logInfo%28%22URL+:+%22+%2B+URL%29%3B%0D%0A++++++++String+postURL+%3D+URL%3B%0D%0A++++++++String+mainFacet+%3D+JSON_val%3B%0D%0A%09%09logInfo%28%22mainFacet:+%22+%2B+mainFacet%29%3B%0D%0A%0D%0A%0D%0A++++++++axonCall.setLoginURL%28loginURL%29%3B%0D%0A++++++++axonCall.login%28username%2C+password%29%3B%0D%0A++++++++logInfo%28%22Login+returned:+%22+%2B+axonCall.getResultCode%28%29%29%3B%0D%0A++++++++logInfo%28%22Login+message+returned:+%22+%2B+axonCall.getResultMessage%28%29%29%3B%0D%0A%0D%0A++++++++if+%28%21Constants.OK.equals%28axonCall.getResultCode%28%29%29%29+%7B%0D%0A++++++++++++failSession%28%22Login+failed.%22%29%3B%0D%0A++++++++%7D%0D%0A%0D%0A%09%09axonCall.setLimit%28%221000000%22%29%3B%0D%0A++++++++axonCall.setQueryURL%28postURL%29%3B%0D%0A++++++++logInfo%28%22queryURL:+%22+%2B+axonCall.getQueryURL%28%29%29%3B%0D%0A++++++++axonCall.setMainFacet%28mainFacet%29%3B%0D%0A++++++++logInfo%28%22mainFacet:+%22+%2B+axonCall.getMainFacet%28%29%29%3B%0D%0A%0D%0A++++++++axonCall.queryAxon%28%29%3B%0D%0A++++++++%0D%0A++++++++logInfo%28%22Query+returned:+%22+%2B+axonCall.getResultCode%28%29%29%3B%0D%0A++++++++logInfo%28%22Query+returned+message:+%22+%2B+axonCall.getResultMessage%28%29%29%3B%0D%0A%0D%0A++++++++axonData+%3D+axonCall.getAxonDataRecords%28%29%3B%0D%0A%0D%0A++++++++logInfo%28%22axonData+contains+%3E%22+%2B+axonData.size%28%29+%2B+%22%3C+records.%22%29%3B%0D%0A%09%09int+i%3D0%3B%0D%0A++++++++for+%28ArrayList%3CString%3E+record+:+axonData%29+%7B%0D%0A++++++++%09i%2B%2B%3B%0D%0A++++++++%09if%28i%3EmaxInLog%29+%7B%0D%0A++++++++%09%09break%3B%0D%0A++++++++%09%7D%0D%0A++++++++++++logInfo%28%22record+is:+%22+%2B+removeNonBMPCharacters%28record.toString%28%29%29%29%3B%0D%0A++++++++%7D%0D%0A+%0D%0A%7D%0D%0A%0D%0A++++private+String+removeNonBMPCharacters%28final+String+input%29+%7B%0D%0A++++++++StringBuilder+strBuilder+%3D+new+StringBuilder%28%29%3B%0D%0A++++++++input.codePoints%28%29.forEach%28%28i%29+-%3E+%7B%0D%0A++++++++++++if+%28Character.isSupplementaryCodePoint%28i%29%29+%7B%0D%0A++++++++++++++++strBuilder.append%28%22%3F%22%29%3B%0D%0A++++++++++++%7D+else+%7B%0D%0A++++++++++++++++strBuilder.append%28Character.toChars%28i%29%29%3B%0D%0A++++++++++++%7D%0D%0A++++++++%7D%29%3B%0D%0A++++++++return+strBuilder.toString%28%29%3B%0D%0A++++%7D%0D%0A" isPartitionable="false" nanoSecondsInDateTimeSelected="false" numOfInnerClasses="0" onEndOfDataMethodSnippet="%2F%2F+ToDo:+Enter+code+that+executes+when+all+the+input+data+is+received+by+the+transformation+here%0A%0A%2F%2FTODO:+Use+structure+from+jar+instead+of+numbering%0A++++++++logInfo%28%22axonData+contains+%3E%22+%2B+axonData.size%28%29+%2B+%22%3C+records.%22%29%3B%0A%09%09int+i+%3D0%3B%0A++++++++for+%28ArrayList%3CString%3E+record+:+axonData%29+%7B%0A++++++++%09id%3Drecord.get%280%29%3B%0A++++++++%09name%3Drecord.get%281%29%3B%0A++++++++%09definition%3Drecord.get%282%29%3B%0A++++++++%09refNumber%3Drecord.get%283%29%3B%0A++++++++%09type%3Drecord.get%284%29%3B%0A++++++++%09axonStatus%3Drecord.get%285%29%3B%0A++++++++%09lifecycle%3Drecord.get%286%29%3B%0A++++++++%09systemId%3Drecord.get%287%29%3B%0A++++++++%09systemName%3Drecord.get%288%29%3B%0A++++++++%09glossaryId%3Drecord.get%289%29%3B%0A++++++++%09glossaryName%3Drecord.get%2810%29%3B%0A++++++++%09createdDate%3Drecord.get%2811%29%3B%0A++++++++%09lastUpdatedDate%3Drecord.get%2812%29%3B%0A++++++++%09accessControl%3Drecord.get%2813%29%3B%0A++++++++%09%0A%09+%09%09generateRow%28%29%3B%0A%09%0A++++++++%7D%0A+%0A" onInputRowMethodSnippet="inputRows%2B%2B%3B%0Aif+%28inputRows+%3D%3D+1%29+%7B%0A%09logInfo%28%22Processing+Axon+request...%22%29%3B%0A%09callAxon%28queryURL%2CloginURL%2CJSON_val%2Cusername%2C+password%29%3B%0A%7D+else+%7B%0A%09logError%28%22More+than+1+input+row.+This+is+unexpected+as+there+should+only+be+one+record+with+connectivity+info.%22%29%3B%0A%09failSession%28%22Usage+error%22%29%3B%0A%7D%0A%0A%0A" onTransactionMethodSnippet="%2F%2F+ToDo:+Enter+code+that+executes+when+a+transaction+is+received+by+the+transformation%0A%0A%0A" snippetsOfOptimizerInterfaces="%2F%2F+Transformation+instance+for+predicate+push+optimization%0D%0AInstance+instance%3B%0D%0A%0D%0A%0D%0A%2F%2F+Initialize+PredicatePushOptimizable%0D%0Apublic+void+initPredicatePushOptimizable%28Instance+inst%29+%7B%0D%0A%09%2F%2F+Store+the+instance%0D%0A%09instance+%3D+inst%3B%0D%0A%7D%0D%0A%0D%0A%0D%0Apublic+ResultAndMessage+allowPredicatePush%28boolean+ignoreOrderOfOp%29+%7B%0D%0A%09%2F%2F+This+function+must+return+true+in+order+to+enable+predicate+push+optimization%0D%0A%09%2F%2F+return+new+ResultAndMessage%28true%2C+%22%22%29%3B%0D%0A%09return+new+ResultAndMessage%28false%2C+%22Predicate+Push+Optimization+Is+Not+Supported%22%29%3B%09%0D%0A%7D%0D%0A%0D%0A%0D%0Apublic+boolean+canGenerateOutputFieldEvalError%28%29+%7B%0D%0A%09%2F%2F+If+the+Java+transformation+can+generate+an+output+field+evaluation+error+%28common+case%29%2C%0D%0A%09%2F%2F+return+true.+Otherwise+return+false.%0D%0A%09return+true%3B%0D%0A%7D%0D%0A%0D%0A%0D%0Apublic+InfaExpression+getInputExpr%28TransformationField+field%2C%0D%0A%09%09TransformationDataInterface+group%29+%7B%0D%0A%09%2F%2F+This+function+returns+an+Informatica+expression+for+output+fields+based+on+the+value+of+input+fields%0D%0A%09%2F%2F+You+can+push+predicates+that+have+fields+with+input+expressions+defined+for+them.%0D%0A%09%2F%2F+For+example%2C+if+you+have+two+input+fields+in0+and+in1+and+three+output+fields+out0%2C+out1%2C+out2%0D%0A%09%2F%2F+out0+is+the+pass-through+of+in1%2C+out1+is+sum+of+in0+and+in1%2C+and+out2+is+unknown.+The+code+should+be:%0D%0A%09%2F%2Fif+%28field.getName%28%29.equals%28%22out0%22%29%29%0D%0A%09%2F%2F++return+new+InfaExpression%28%22in0%22%2C+instance%29%3B%0D%0A%09%2F%2Felse+if+%28field.getName%28%29.equals%28%22out1%22%29%29%0D%0A%09%2F%2F%09return+new+InfaExpression%28%22in0+%2B+in1%22%2C+instance%29%3B%0D%0A%09%2F%2Felse+if+%28field.getName%28%29.equals%28%22out2%22%29%29%0D%0A%09%2F%2F%09return+null%3B%0D%0A%09return+null%3B%0D%0A%7D%0D%0A%0D%0A%0D%0Apublic+List%3CTransformationDataInterface%3E+inputGroupsPushPredicateTo%28%0D%0A%09%09List%3CTransformationField%3E+fields%29+%7B%0D%0A%09%2F%2F+This+function+returns+a+list+of+input+data+interfaces+to+push+predicates+to.%0D%0A%09%2F%2F+Since+the+Java+transformation+has+one+input+data+interface%2C+you+should+not+have+to+modify+this+function.%0D%0A%09AbstractTransformation+tx+%3D+instance.getTransformation%28%29%3B%0D%0A%09List%3CDataInterface%3E+dis+%3D+tx.getDataInterfaces%28%29%3B%0D%0A%09List%3CTransformationDataInterface%3E+inputDIs+%3D+new+ArrayList%3CTransformationDataInterface%3E%28%29%3B%0D%0A%09for+%28DataInterface+di+:+dis%29%7B%0D%0A%09%09TransformationDataInterface+tdi+%3D+%28TransformationDataInterface%29+di%3B%0D%0A%09%09if+%28tdi.isInput%28%29%29%0D%0A%09%09%09inputDIs.add%28tdi%29%3B%0D%0A%09%7D%0D%0A%09if%28inputDIs.size%28%29+%3D%3D+1%29%0D%0A%09%09return+inputDIs%3B%0D%0A%09else%0D%0A%09%09return+null%3B%0D%0A%7D %2F%2F+The+transformation+instance+for+which+this+Filter+Pushdown+Optimizable+Implementation+is+for%0D%0AInstance+instanceForFPO%3B%0D%0A%0D%0A%2F%2F+Initialize+the+Filter+Pushdown+Optimizable%0D%0Apublic+void+initFilterPushdownOptimizable%28Instance+inst%2C%0D%0A%09%09OptimizerSessInfo+context%29+%7B%0D%0A%09%2F%2F+Store+the+instance%0D%0A%09instanceForFPO+%3D+inst%3B%0D%0A%7D%0D%0A%0D%0Apublic+ResultAndMessage+isFilterSupported%28%29+%7B%0D%0A%09%2F%2F+To+Enable+Filter+Pushdown+Optimization+this+function+should+return+true%0D%0A++++%2F%2F+return+new+ResultAndMessage%28true%2C+%22%22%29%3B%0D%0A%09return+new+ResultAndMessage%28false%2C+%22Filter+Pushdown+Optimization+Is+Not+Supported%22%29%3B%0D%0A%7D%0D%0A%09%0D%0Apublic+ResultAndMessage+pushFilter%28InfaExpression+condition%29+%7B%0D%0A%09%0D%0A%09%2F%2F+Add+code+to+absorb+the+filter%0D%0A%09%2F%2F+If+filter+is+successfully+absorbed+return+new+ResultAndMessage%28true%2C+%22%22%29%3B+and+the+optimizer%0D%0A%09%2F%2F+will+remove+the+filter+from+the+mapping%0D%0A%09%2F%2F+If+the+filter+is+not+absorbed%2C+return+new+ResultAndMessage%28false%2C+msg%29%3B+%0D%0A%09return+new+ResultAndMessage%28false%2C+%22Filter+Pushdown+Optimization+Is+Not+Supported%22%29%3B%0D%0A%7D%0D%0A%0D%0A%2F%2F+Metadata+stored+in+this+class+is+not+accessible+at+runtime.+To+pass%0D%0A%2F%2F+metadata+to+the+runtime%2C+a+method+storeMetadata%28String+key%2C+String+data%29+is+%0D%0A%2F%2F+provided.+Data+must+be+provided+as+a+String%2C+and+will+be+associated+with+%0D%0A%2F%2F+the+given+key.+If+data+for+the+key+is+already+present%2C+it+will+be+%0D%0A%2F%2F+overwritten.+Note:+to+ensure+proper+behavior%2C+do+not+change+the+name+of%0D%0A%2F%2F+instanceForFPO.+Example+call:%0D%0A%2F%2F+storeMetadata+%28key%2C+data%29%3B%0D%0A%2F%2F%0D%0A%2F%2F+A+corresponding+method+getMetadata%28String+key%29+is+provided+to+retrieve%0D%0A%2F%2F+metadata+that+has+been+stored+with+storeMetadata.+It+returns+a+String:%0D%0A%2F%2F+the+data+associated+with+the+key%2C+or+null+if+no+data+is+found.+Note:+to+%0D%0A%2F%2F+ensure+proper+behavior%2C+do+not+change+the+name+of+instanceForFPO.%0D%0A%2F%2F+Example+call:%0D%0A%2F%2F+String+data+%3D+getMetadata%28key%29%3B">
+<javaInterfaces>
+<JavaDataInterface imx:id="U:ofeKEfjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaDataInterface" input="true" name="Input">
+<javaFields>
+<JavaField imx:id="U:ofexNPjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="ContentType"/>
+<JavaField imx:id="U:ofexNfjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="JSON_val"/>
+<JavaField imx:id="U:ofexNvjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="loginURL"/>
+<JavaField imx:id="U:ofexN_juEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="queryURL"/>
+<JavaField imx:id="U:ofexOPjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="username"/>
+<JavaField imx:id="U:ofexOfjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="password"/>
+</javaFields>
+</JavaDataInterface>
+<JavaDataInterface imx:id="U:ofeKEvjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaDataInterface" name="Output" output="true">
+<javaFields>
+<JavaField imx:id="U:ofexI_juEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" output="true" name="id">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:ofexJPjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" output="true" name="name">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:ofexJfjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" output="true" name="definition">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:ofexJvjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" output="true" name="refNumber">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:ofexJ_juEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" output="true" name="type">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:ofexKPjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" output="true" name="axonStatus">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:ofexKfjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" output="true" name="lifecycle">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:ofexKvjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" output="true" name="systemId">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:ofexK_juEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" output="true" name="systemName">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:ofexLPjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" output="true" name="glossaryId">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:ofexLfjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" output="true" name="glossaryName">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:ofexLvjuEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="30" upper="1" output="true" name="createdDate">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:8e1wRfjwEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="30" upper="1" output="true" name="lastUpdatedDate">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+<JavaField imx:id="U:ofexL_juEemkzLxtKg2PjQ" xsi:type="javatx:JavaField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" output="true" name="accessControl">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</JavaField>
+</javaFields>
+</JavaDataInterface>
+</javaInterfaces>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:ofeJ3_juEemkzLxtKg2PjQ" xsi:type="mapplet:MappletTx" name="mplt_Extract_AxonConnectInfo" mapplet="U:PRKKvfhTEemKEZlHphROug">
+<mappletInterfaces>
+<MappletInterface imx:id="U:ofeKC_juEemkzLxtKg2PjQ" xsi:type="mapplet:MappletInterface" name="Output" output="true" mappletInterface="U:dfmmxPhTEemKEZlHphROug">
+<mappletFields>
+<MappletField imx:id="U:ofeKDPjuEemkzLxtKg2PjQ" xsi:type="mapplet:MappletField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" name="password" output="true" mappletField="U:dfnN1fhTEemKEZlHphROug"/>
+<MappletField imx:id="U:ofeKDfjuEemkzLxtKg2PjQ" xsi:type="mapplet:MappletField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" name="Content_Type" output="true" mappletField="U:dfnN1vhTEemKEZlHphROug"/>
+<MappletField imx:id="U:ofeKDvjuEemkzLxtKg2PjQ" xsi:type="mapplet:MappletField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" name="username" output="true" mappletField="U:dfnN1_hTEemKEZlHphROug"/>
+<MappletField imx:id="U:ofeKD_juEemkzLxtKg2PjQ" xsi:type="mapplet:MappletField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="loginURL" output="true" mappletField="U:dfnN2PhTEemKEZlHphROug"/>
+<MappletField imx:id="U:ofeKEPjuEemkzLxtKg2PjQ" xsi:type="mapplet:MappletField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="queryURL" output="true" mappletField="U:dfnN2fhTEemKEZlHphROug"/>
+</mappletFields>
+</MappletInterface>
+</mappletInterfaces>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:ofeJ4fjuEemkzLxtKg2PjQ" xsi:type="expression:ExpressionTx" name="exp_CollectInfo">
+<expressionInterface>
+<ExpressionDataInterface imx:id="U:ofeJ4vjuEemkzLxtKg2PjQ" xsi:type="expression:ExpressionDataInterface" input="true" name="Group" output="true">
+<expressionFields>
+<ExpressionField imx:id="U:BR6Bo_jyEemkzLxtKg2PjQ" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.dynamictype.InfaDynamicTypeSeed.Rule" lower="1" upper="1" input="true" name="From_java_Axon" output="true">
+<typeConfig imx:id="ID_90" xsi:type="rule:RuleTypeConfig">
+<rules>
+<Rule imx:id="ID_91" xsi:type="rule:AllRule"/>
+</rules>
+</typeConfig>
+</ExpressionField>
+</expressionFields>
+</ExpressionDataInterface>
+</expressionInterface>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:8e1wMPjwEemkzLxtKg2PjQ" xsi:type="target:TargetTx" active="true" name="Write_DQR_STG_AXON_DATASET" dso="U:8e1wMfjwEemkzLxtKg2PjQ">
+<anonymousDso imx:id="U:8e1wMfjwEemkzLxtKg2PjQ" xsi:type="datasourceoperation:WriteRelationalDataSourceOperation" name="DQR_STG_AXON_DATASET" delete="false" loadType="Normal" tableDefinition="U:AM7KsfcqEemfQA5ZHZ0sbw" truncateTargetTable="true" typeSystem="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem">
+<defaultConfigs>
+<DSORuntimeConfig imx:id="U:8e1wNPjwEemkzLxtKg2PjQ" xsi:type="dsoconfig:RelationalDSORuntimeConfig" connectInfo="stringIdentity:CONN_DQ_STAGING" connectionName="CONN_DQ_STAGING"/>
+</defaultConfigs>
+<operations>
+<Capability imx:id="ID_92" xsi:type="datasourceoperation1:WriteCapability" defaultAdapter="smd:com.informatica.metadata.seed.relational.CanonicalRelational.relationalWriterDataAdapter" defaultConfig="U:8e1wNPjwEemkzLxtKg2PjQ">
+<inGroups>
+<DataAccessGroup imx:id="ID_93" xsi:type="datasourceoperation1:DataAccessGroup" groupType="U:8e1wNfjwEemkzLxtKg2PjQ" input="true"/>
+</inGroups>
+</Capability>
+</operations>
+<ownedCapabilityTypes>
+<ComplexType imx:id="U:8e1wNfjwEemkzLxtKg2PjQ" xsi:type="typelibrary:ComplexType" name="DQR_STG_AXON_DATASET">
+<features>
+<StructuralFeature imx:id="U:8e1wN_jwEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="ID" nullable="true" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:8e1wOPjwEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="NAME" nullable="true" precision="1000" upper="1"/>
+<StructuralFeature imx:id="U:8e1wOfjwEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="DEFINITION" nullable="true" precision="1000" upper="1"/>
+<StructuralFeature imx:id="U:BR6BmvjyEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="REFNUMBER" nullable="true" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:8e1wO_jwEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="TYPE" nullable="true" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:BR6Bm_jyEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="AXONSTATUS" nullable="true" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:8e1wPfjwEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="LIFECYCLE" nullable="true" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:BR6BnPjyEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="SYSTEMID" nullable="true" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:BR6BnfjyEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="SYSTEMNAME" nullable="true" precision="1000" upper="1"/>
+<StructuralFeature imx:id="U:BR6BnvjyEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="GLOSSARYID" nullable="true" precision="100" upper="1"/>
+<StructuralFeature imx:id="U:BR6Bn_jyEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="GLOSSARYNAME" nullable="true" precision="1000" upper="1"/>
+<StructuralFeature imx:id="U:BR6BoPjyEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="CREATEDDATE" nullable="true" precision="30" upper="1"/>
+<StructuralFeature imx:id="U:BR6BofjyEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="LASTUPDATEDDATE" nullable="true" precision="30" upper="1"/>
+<StructuralFeature imx:id="U:BR6BovjyEemkzLxtKg2PjQ" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="ACCESSCONTROL" nullable="true" precision="100" upper="1"/>
+</features>
+</ComplexType>
+</ownedCapabilityTypes>
+<typeLibrary imx:id="U:8e1wNvjwEemkzLxtKg2PjQ" xsi:type="typelibrary:TypeLibrary"/>
+<relationalFields>
+<RelationalField imx:id="ID_94" xsi:type="datasourceoperation:RelationalField" column="U:AM7KsvcqEemfQA5ZHZ0sbw" feature="U:8e1wN_jwEemkzLxtKg2PjQ" name="ID" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_96" xsi:type="datasourceoperation:RelationalField" column="U:AM7Ks_cqEemfQA5ZHZ0sbw" feature="U:8e1wOPjwEemkzLxtKg2PjQ" name="NAME" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_97" xsi:type="datasourceoperation:RelationalField" column="U:AM7KtPcqEemfQA5ZHZ0sbw" feature="U:8e1wOfjwEemkzLxtKg2PjQ" name="DEFINITION" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_98" xsi:type="datasourceoperation:RelationalField" column="U:AM7KtvcqEemfQA5ZHZ0sbw" feature="U:8e1wO_jwEemkzLxtKg2PjQ" name="TYPE" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_99" xsi:type="datasourceoperation:RelationalField" column="U:AM7KuPcqEemfQA5ZHZ0sbw" feature="U:8e1wPfjwEemkzLxtKg2PjQ" name="LIFECYCLE" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_100" xsi:type="datasourceoperation:RelationalField" column="U:5bYKC_jxEemkzLxtKg2PjQ" feature="U:BR6BmvjyEemkzLxtKg2PjQ" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_101" xsi:type="datasourceoperation:RelationalField" column="U:5bYKDPjxEemkzLxtKg2PjQ" feature="U:BR6Bm_jyEemkzLxtKg2PjQ" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_102" xsi:type="datasourceoperation:RelationalField" column="U:5bYKDfjxEemkzLxtKg2PjQ" feature="U:BR6BnPjyEemkzLxtKg2PjQ" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_103" xsi:type="datasourceoperation:RelationalField" column="U:5bYKDvjxEemkzLxtKg2PjQ" feature="U:BR6BnfjyEemkzLxtKg2PjQ" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_104" xsi:type="datasourceoperation:RelationalField" column="U:5bYKD_jxEemkzLxtKg2PjQ" feature="U:BR6BnvjyEemkzLxtKg2PjQ" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_105" xsi:type="datasourceoperation:RelationalField" column="U:5bYKEPjxEemkzLxtKg2PjQ" feature="U:BR6Bn_jyEemkzLxtKg2PjQ" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_106" xsi:type="datasourceoperation:RelationalField" column="U:5bYKEfjxEemkzLxtKg2PjQ" feature="U:BR6BoPjyEemkzLxtKg2PjQ" odbcPrecision="30" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_107" xsi:type="datasourceoperation:RelationalField" column="U:5bYKEvjxEemkzLxtKg2PjQ" feature="U:BR6BofjyEemkzLxtKg2PjQ" odbcPrecision="30" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+<RelationalField imx:id="ID_108" xsi:type="datasourceoperation:RelationalField" column="U:5bYKE_jxEemkzLxtKg2PjQ" feature="U:BR6BovjyEemkzLxtKg2PjQ" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_95"/>
+</relationalFields>
+<relationalRecordInstance imx:id="ID_95" xsi:type="datasourceoperation:RelationalRecordInstance" name="DQR_STG_AXON_DATASET" record="U:AM7KsfcqEemfQA5ZHZ0sbw"/>
+</anonymousDso>
+<targetInterfaces>
+<TargetDataInterface imx:id="U:8e1wMvjwEemkzLxtKg2PjQ" xsi:type="target:TargetDataInterface" input="true" name="Group">
+<targetFields>
+<TargetTxField imx:id="U:8e1wM_jwEemkzLxtKg2PjQ" xsi:type="target:TargetTxField" type="U:8e1wNfjwEemkzLxtKg2PjQ" input="true" name="Input"/>
+</targetFields>
+</TargetDataInterface>
+</targetInterfaces>
+</AbstractTransformation>
+</transformations>
+</mapping:Mapping>
+<project:Project imx:id="U:YvTvm61XEemidS36A2IhAQ" name="p_DQIT_DQReporting">
+<imx:annotations>
+<imx:IGenericAnnotations>
+<com.informatica.tools.objectie key1="projectName" value1="MRS_DQFramework_DEV_01"/>
+</imx:IGenericAnnotations>
+</imx:annotations>
+<annotations>
+<Annotation imx:id="ID_109" xsi:type="description:Description"/>
+</annotations>
+<contents>
+<IObject imx:id="U:h_HGXMABEemUWBBn16OZlA" xsi:type="folder:Folder" name="Axon">
+<contents>
+<IObject imx:idref="U:ofdixvjuEemkzLxtKg2PjQ" xsi:type="mapping:Mapping"/>
+<IObject imx:id="U:AM7KsfcqEemfQA5ZHZ0sbw" xsi:type="datarecord:Table" connection="stringIdentity:CONN_DQ_STAGING" connectionName="CONN_DQ_STAGING" connectionType="com.informatica.metadata.relational.connectinfo.OracleNativeConnectInfo" name="DQR_STG_AXON_DATASET" physicalName="DQR_STG_AXON_DATASET">
+<columns>
+<Column imx:id="U:AM7KsvcqEemfQA5ZHZ0sbw" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="ID" nullable="true" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="100"/>
+<Column imx:id="U:AM7Ks_cqEemfQA5ZHZ0sbw" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="NAME" nullable="true" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="1000"/>
+<Column imx:id="U:AM7KtPcqEemfQA5ZHZ0sbw" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="DEFINITION" nullable="true" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="1000"/>
+<Column imx:id="U:5bYKC_jxEemkzLxtKg2PjQ" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="REFNUMBER" nullable="true" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="100"/>
+<Column imx:id="U:AM7KtvcqEemfQA5ZHZ0sbw" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="TYPE" nullable="true" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="100"/>
+<Column imx:id="U:5bYKDPjxEemkzLxtKg2PjQ" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="AXONSTATUS" nullable="true" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="100"/>
+<Column imx:id="U:AM7KuPcqEemfQA5ZHZ0sbw" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="LIFECYCLE" nullable="true" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="100"/>
+<Column imx:id="U:5bYKDfjxEemkzLxtKg2PjQ" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="SYSTEMID" nullable="true" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="100"/>
+<Column imx:id="U:5bYKDvjxEemkzLxtKg2PjQ" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="SYSTEMNAME" nullable="true" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="1000"/>
+<Column imx:id="U:5bYKD_jxEemkzLxtKg2PjQ" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="GLOSSARYID" nullable="true" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="100"/>
+<Column imx:id="U:5bYKEPjxEemkzLxtKg2PjQ" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="GLOSSARYNAME" nullable="true" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="1000"/>
+<Column imx:id="U:5bYKEfjxEemkzLxtKg2PjQ" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="CREATEDDATE" nullable="true" odbcPrecision="30" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="30"/>
+<Column imx:id="U:5bYKEvjxEemkzLxtKg2PjQ" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="LASTUPDATEDDATE" nullable="true" odbcPrecision="30" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="30"/>
+<Column imx:id="U:5bYKE_jxEemkzLxtKg2PjQ" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="ACCESSCONTROL" nullable="true" odbcPrecision="100" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="100"/>
+</columns>
+</IObject>
+<IObject imx:id="U:Z_QhSMAGEemfFj8aZk7bZA" xsi:type="datarecord:Table" connection="stringIdentity:CONN_DQ_STAGING" connectionName="CONN_DQ_STAGING" connectionType="com.informatica.metadata.relational.connectinfo.OracleNativeConnectInfo" name="AXON_DRIVER" physicalName="AXON_DRIVER">
+<columns>
+<Column imx:id="U:Z_QhScAGEemfFj8aZk7bZA" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="NAME_USR" nullable="true" odbcPrecision="200" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="200"/>
+<Column imx:id="U:Z_QhSsAGEemfFj8aZk7bZA" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Flong+raw" name="DRIVER" nullable="true" odbcPrecision="4000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Flongvarbinary" precision="4000"/>
+<Column imx:id="U:Z_QhS8AGEemfFj8aZk7bZA" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fdate" name="LOAD_DATE" nullable="true" odbcPrecision="10" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fdate" precision="19"/>
+<Column imx:id="U:K74i-Pi5Eem0A27shf6S6w" xsi:type="datarecord:Column" type="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem%2Fvarchar2" name="BASE_URL" nullable="true" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" precision="1000"/>
+</columns>
+</IObject>
+<IObject imx:id="U:PRKKvfhTEemKEZlHphROug" xsi:type="mapping:Mapping" name="mplt_Extract_AxonConnectInfo">
+<characteristics>
+<Characteristic imx:id="ID_110" xsi:type="mapplet:MappletCharacteristic"/>
+<Characteristic imx:id="ID_111" xsi:type="runtime:RuntimeCharacteristic" selectedExecutionEnvironmentName="native">
+<environments>
+<ExecutionEnvironment imx:id="ID_112" xsi:type="runtime:NativeExecutionEnvironment"/>
+</environments>
+<handlers>
+<TxHandlerConfig imx:id="ID_113" xsi:type="source1:SourceTxHandlerConfig" txInstance="U:dfmmv_hTEemKEZlHphROug" selectedAdapter="smd:com.informatica.metadata.seed.relational.CanonicalRelational.relationalReaderDataAdapter"/>
+</handlers>
+</Characteristic>
+</characteristics>
+<definedLibraries imx:id="U:PRKKvvhTEemKEZlHphROug" xsi:type="typelibrary:TypeLibrary" name="mplt_Type_Definition_Library" typeSystem="smd:com.informatica.metadata.seed.platform.Platform.typesystem"/>
+<instances>
+<Instance imx:id="U:dfmmvvhTEemKEZlHphROug" xsi:type="mapping:Instance" name="Exp_Decr_Driver" toOutlineLinks="ID_114" transformation="U:dfmmwfhTEemKEZlHphROug">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_115" xsi:type="mapping:OutlineLink" fromInstance="U:dfmmvvhTEemKEZlHphROug" toInstance="U:dfmmwPhTEemKEZlHphROug"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_116" xsi:type="mapping:TransformationFieldPort" fromPort="ID_117" instance="U:dfmmvvhTEemKEZlHphROug" transformationField="U:dfnN4_hTEemKEZlHphROug"/>
+<TransformationFieldPort imx:id="ID_118" xsi:type="mapping:TransformationFieldPort" fromPort="ID_119" toPorts="ID_120" instance="U:dfmmvvhTEemKEZlHphROug" transformationField="U:dfnN5vhTEemKEZlHphROug"/>
+<TransformationFieldPort imx:id="ID_121" xsi:type="mapping:TransformationFieldPort" toPorts="ID_122" instance="U:dfmmvvhTEemKEZlHphROug" transformationField="U:dfnN5PhTEemKEZlHphROug"/>
+<TransformationFieldPort imx:id="ID_123" xsi:type="mapping:TransformationFieldPort" toPorts="ID_124" instance="U:dfmmvvhTEemKEZlHphROug" transformationField="U:dfnN5fhTEemKEZlHphROug"/>
+<TransformationFieldPort imx:id="ID_125" xsi:type="mapping:TransformationFieldPort" toPorts="ID_126" instance="U:dfmmvvhTEemKEZlHphROug" transformationField="U:dfnN5_hTEemKEZlHphROug"/>
+<TransformationFieldPort imx:id="ID_127" xsi:type="mapping:TransformationFieldPort" toPorts="ID_128" instance="U:dfmmvvhTEemKEZlHphROug" transformationField="U:dfnN6PhTEemKEZlHphROug"/>
+<TransformationFieldPort imx:id="ID_129" xsi:type="mapping:TransformationFieldPort" fromPort="ID_130" instance="U:dfmmvvhTEemKEZlHphROug" transformationField="U:Fd2pVfi4Eem0A27shf6S6w"/>
+</ports>
+</Instance>
+<Instance imx:id="U:dfmmv_hTEemKEZlHphROug" xsi:type="mapping:Instance" name="Read_AXON_DRIVER" transformation="U:dfmmwvhTEemKEZlHphROug">
+<fromOutlineLinks>
+<OutlineLink imx:id="ID_114" xsi:type="mapping:OutlineLink" fromInstance="U:dfmmv_hTEemKEZlHphROug" toInstance="U:dfmmvvhTEemKEZlHphROug"/>
+</fromOutlineLinks>
+<ports>
+<TransformationFieldPort imx:id="ID_131" xsi:type="mapping:TransformationFieldPort" instance="U:dfmmv_hTEemKEZlHphROug" transformationField="U:dfnN3PhTEemKEZlHphROug">
+<children>
+<NestedPort imx:id="ID_117" xsi:type="mapping:NestedPort" toPorts="ID_116" parent="ID_131" structuralFeature="U:dfnN4PhTEemKEZlHphROug"/>
+<NestedPort imx:id="ID_119" xsi:type="mapping:NestedPort" toPorts="ID_118" parent="ID_131" structuralFeature="U:dfnN3_hTEemKEZlHphROug"/>
+<NestedPort imx:id="ID_130" xsi:type="mapping:NestedPort" toPorts="ID_129" parent="ID_131" structuralFeature="U:WO6Wm_i5Eem0A27shf6S6w"/>
+</children>
+</TransformationFieldPort>
+</ports>
+</Instance>
+<Instance imx:id="U:dfmmwPhTEemKEZlHphROug" xsi:type="mapping:Instance" name="output" toOutlineLinks="ID_115" transformation="U:dfmmw_hTEemKEZlHphROug">
+<ports>
+<TransformationFieldPort imx:id="ID_122" xsi:type="mapping:TransformationFieldPort" fromPort="ID_121" instance="U:dfmmwPhTEemKEZlHphROug" transformationField="U:dfnN1fhTEemKEZlHphROug"/>
+<TransformationFieldPort imx:id="ID_124" xsi:type="mapping:TransformationFieldPort" fromPort="ID_123" instance="U:dfmmwPhTEemKEZlHphROug" transformationField="U:dfnN1vhTEemKEZlHphROug"/>
+<TransformationFieldPort imx:id="ID_120" xsi:type="mapping:TransformationFieldPort" fromPort="ID_118" instance="U:dfmmwPhTEemKEZlHphROug" transformationField="U:dfnN1_hTEemKEZlHphROug"/>
+<TransformationFieldPort imx:id="ID_126" xsi:type="mapping:TransformationFieldPort" fromPort="ID_125" instance="U:dfmmwPhTEemKEZlHphROug" transformationField="U:dfnN2PhTEemKEZlHphROug"/>
+<TransformationFieldPort imx:id="ID_128" xsi:type="mapping:TransformationFieldPort" fromPort="ID_127" instance="U:dfmmwPhTEemKEZlHphROug" transformationField="U:dfnN2fhTEemKEZlHphROug"/>
+</ports>
+</Instance>
+</instances>
+<transformations>
+<AbstractTransformation imx:id="U:dfmmwfhTEemKEZlHphROug" xsi:type="expression:ExpressionTx" name="Exp_Decr_Driver">
+<expressionInterface>
+<ExpressionDataInterface imx:id="U:dfnN4vhTEemKEZlHphROug" xsi:type="expression:ExpressionDataInterface" input="true" name="Group" output="true">
+<expressionFields>
+<ExpressionField imx:id="U:dfnN4_hTEemKEZlHphROug" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fbinary" lower="1" precision="4000" upper="1" input="true" name="Enc_Driver" output="true" expression="Enc_Driver"/>
+<ExpressionField imx:id="U:dfnN5PhTEemKEZlHphROug" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" name="Dcry_Driver" output="true" expression="AES_DECRYPT%28Enc_Driver%2C%27DSA%27%29">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</ExpressionField>
+<ExpressionField imx:id="U:dfnN5fhTEemKEZlHphROug" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" name="Content_Type" output="true" expression="%27application%2Fjson%27">
+<defaultValue xsi:type="types:StringValue" valueLiteral="ERROR%28%27transformation+error%27%29"/>
+</ExpressionField>
+<ExpressionField imx:id="U:dfnN5vhTEemKEZlHphROug" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="username" output="true" expression="username"/>
+<ExpressionField imx:id="U:dfnN5_hTEemKEZlHphROug" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="loginURL" output="true" expression="v_baseURL+%7C%7C+%27%2Fapi%2Flogin_check%27"/>
+<ExpressionField imx:id="U:dfnN6PhTEemKEZlHphROug" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="queryURL" output="true" expression="v_baseURL+%7C%7C+%27%2Funison%2Fv1%2Ffacet%2F_search%27"/>
+<ExpressionField imx:id="U:Fd2pVfi4Eem0A27shf6S6w" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="baseURL"/>
+<ExpressionField imx:id="U:Fd2pVvi4Eem0A27shf6S6w" xsi:type="expression:ExpressionField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" name="v_baseURL" expression="baseURL" variable="true"/>
+</expressionFields>
+</ExpressionDataInterface>
+</expressionInterface>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:dfmmwvhTEemKEZlHphROug" xsi:type="source:SourceTx" active="true" name="Read_AXON_DRIVER" dso="U:dfnN2vhTEemKEZlHphROug">
+<anonymousDso imx:id="U:dfnN2vhTEemKEZlHphROug" xsi:type="datasourceoperation:ReadRelationalDataSourceOperation" name="AXON_DRIVER" tableDefinitions="U:Z_QhSMAGEemfFj8aZk7bZA" typeSystem="smd:com.informatica.adapters.typesystem.relational.OracleTypeSystem.typesystem">
+<defaultConfigs>
+<DSORuntimeConfig imx:id="U:dfnN3fhTEemKEZlHphROug" xsi:type="dsoconfig:RelationalDSORuntimeConfig" connectInfo="stringIdentity:CONN_DQ_STAGING" connectionName="CONN_DQ_STAGING"/>
+</defaultConfigs>
+<operations>
+<Capability imx:id="ID_134" xsi:type="datasourceoperation1:ReadCapability" defaultAdapter="smd:com.informatica.metadata.seed.relational.CanonicalRelational.relationalReaderDataAdapter" defaultConfig="U:dfnN3fhTEemKEZlHphROug">
+<outGroups>
+<DataAccessGroup imx:id="ID_135" xsi:type="datasourceoperation1:DataAccessGroup" groupType="U:dfnN3vhTEemKEZlHphROug"/>
+</outGroups>
+</Capability>
+<Capability imx:id="ID_136" xsi:type="datasourceoperation1:LookupCapability" defaultAdapter="smd:com.informatica.metadata.seed.relational.CanonicalRelational.relationalReaderDataAdapter" defaultConfig="U:dfnN3fhTEemKEZlHphROug"/>
+</operations>
+<ownedCapabilityTypes>
+<ComplexType imx:id="U:dfnN3vhTEemKEZlHphROug" xsi:type="typelibrary:ComplexType" name="AXON_DRIVER">
+<features>
+<StructuralFeature imx:id="U:dfnN3_hTEemKEZlHphROug" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="NAME_USR" nullable="true" precision="200" upper="1"/>
+<StructuralFeature imx:id="U:dfnN4PhTEemKEZlHphROug" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fbinary" lower="1" name="DRIVER" nullable="true" precision="4000" upper="1"/>
+<StructuralFeature imx:id="U:dfnN4fhTEemKEZlHphROug" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fdate%2Ftime" lower="1" name="LOAD_DATE" nullable="true" precision="29" scale="9" upper="1"/>
+<StructuralFeature imx:id="U:WO6Wm_i5Eem0A27shf6S6w" xsi:type="typelibrary:StructuralFeature" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" name="BASE_URL" nullable="true" precision="1000" upper="1"/>
+</features>
+</ComplexType>
+</ownedCapabilityTypes>
+<relationalFields>
+<RelationalField imx:id="ID_137" xsi:type="datasourceoperation:RelationalField" column="U:Z_QhScAGEemfFj8aZk7bZA" feature="U:dfnN3_hTEemKEZlHphROug" name="NAME_USR" odbcPrecision="200" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_138"/>
+<RelationalField imx:id="ID_139" xsi:type="datasourceoperation:RelationalField" column="U:Z_QhSsAGEemfFj8aZk7bZA" feature="U:dfnN4PhTEemKEZlHphROug" name="DRIVER" odbcPrecision="4000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Flongvarbinary" recordInstance="ID_138"/>
+<RelationalField imx:id="ID_140" xsi:type="datasourceoperation:RelationalField" column="U:Z_QhS8AGEemfFj8aZk7bZA" feature="U:dfnN4fhTEemKEZlHphROug" name="LOAD_DATE" odbcPrecision="10" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fdate" recordInstance="ID_138"/>
+<RelationalField imx:id="ID_141" xsi:type="datasourceoperation:RelationalField" column="U:K74i-Pi5Eem0A27shf6S6w" feature="U:WO6Wm_i5Eem0A27shf6S6w" odbcPrecision="1000" odbcType="smd:com.informatica.metadata.seed.odbc.ODBC.typesystem%2Fvarchar" recordInstance="ID_138"/>
+</relationalFields>
+<relationalRecordInstances>
+<RelationalRecordInstance imx:id="ID_138" xsi:type="datasourceoperation:RelationalRecordInstance" name="AXON_DRIVER" record="U:Z_QhSMAGEemfFj8aZk7bZA"/>
+</relationalRecordInstances>
+</anonymousDso>
+<sourceInterfaces>
+<SourceDataInterface imx:id="U:dfnN2_hTEemKEZlHphROug" xsi:type="source:SourceDataInterface" name="Group" output="true">
+<sourceFields>
+<SourceTxField imx:id="U:dfnN3PhTEemKEZlHphROug" xsi:type="source:SourceTxField" type="U:dfnN3vhTEemKEZlHphROug" name="output" output="true"/>
+</sourceFields>
+</SourceDataInterface>
+</sourceInterfaces>
+</AbstractTransformation>
+<AbstractTransformation imx:id="U:dfmmw_hTEemKEZlHphROug" xsi:type="mapplet:MappletOutputTx" active="true" name="output">
+<outputInterfaces>
+<MappletOutputInterface imx:id="U:dfmmxPhTEemKEZlHphROug" xsi:type="mapplet:MappletOutputInterface" input="true" name="Output">
+<outputFields>
+<MappletOutputField imx:id="U:dfnN1fhTEemKEZlHphROug" xsi:type="mapplet:MappletOutputField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="password"/>
+<MappletOutputField imx:id="U:dfnN1vhTEemKEZlHphROug" xsi:type="mapplet:MappletOutputField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="Content_Type"/>
+<MappletOutputField imx:id="U:dfnN1_hTEemKEZlHphROug" xsi:type="mapplet:MappletOutputField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="100" upper="1" input="true" name="username"/>
+<MappletOutputField imx:id="U:dfnN2PhTEemKEZlHphROug" xsi:type="mapplet:MappletOutputField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="loginURL"/>
+<MappletOutputField imx:id="U:dfnN2fhTEemKEZlHphROug" xsi:type="mapplet:MappletOutputField" type="smd:com.informatica.metadata.seed.platform.Platform.typesystem%2Fstring" lower="1" precision="1000" upper="1" input="true" name="queryURL"/>
+</outputFields>
+</MappletOutputInterface>
+</outputInterfaces>
+</AbstractTransformation>
+</transformations>
+</IObject>
+</contents>
+</IObject>
+</contents>
+</project:Project>
+<connectinfo:OracleNativeConnectInfo imx:id="stringIdentity:CONN_DQ_STAGING" connectionType="ORACLE" name="CONN_DQ_STAGING">
+<defaultAttributes imx:id="U:KkEG_bnjEemxXAzzO_qo4Q" xsi:type="connectinfo1:ConnectionPoolAttributes"/>
+</connectinfo:OracleNativeConnectInfo>
+<imx:crc value="2521424931"/>
+</imx:IMX>
