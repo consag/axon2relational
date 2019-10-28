@@ -80,34 +80,43 @@ public class AxonMain {
         logger.info(axonCall.getResultCode());
         logger.info(axonCall.getResultMessage());
 
-        //Old way
-/*        ArrayList<ArrayList<String>> axonData = axonCall.getAxonDataRecords();
-        logger.info("axonData contains >" + axonData.size() + "< records.");
-        int i =0;
-        for (ArrayList<String> record : axonData) {
-            i++;
-            if (i>maxInLog) {
-                break;
-            }
-
-            logger.info("record is " + removeNonBMPCharacters(record.toString()));
-        }
-*/
-        //New way
         ArrayList<String> axonFields = axonCall.getAxonDataFields();
+        int counter =0;
+
+        //Axon SYSTEM
         ArrayList<AxonSystem> axonSystems = axonCall.getAxonSystems();
         logger.info("The fields : " + axonFields.toString());
 
-        int counter =0;
+        counter =0;
         for (AxonSystem record : axonSystems) {
             counter++;
             if ( counter > maxInLog) {
                 break;
             }
-
             logger.info("record >" + counter + "< id >" + record.id + "< name is >" + record.name +"<.");
         }
 
+        //Axon DATASET
+        ArrayList<AxonDataset> axonDatasets = axonCall.getAxonDatasets();
+        counter =0;
+        for (AxonDataset record : axonDatasets) {
+            counter++;
+            if ( counter > maxInLog) {
+                break;
+            }
+            logger.info("record >" + counter + "< id >" + record.id + "< name is >" + record.name +"<.");
+        }
+
+        //Axon ATTRIBUTE
+        ArrayList<AxonAttribute> axonAttributes = axonCall.getAxonAttributes();
+        counter =0;
+        for (AxonAttribute record : axonAttributes) {
+            counter++;
+            if ( counter > maxInLog) {
+                break;
+            }
+            logger.info("record >" + counter + "< id >" + record.id + "< name is >" + record.name +"<.");
+        }
 
 
     }

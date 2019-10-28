@@ -26,6 +26,7 @@
 package nl.jacbeekers;
 
 import org.apache.log4j.Logger;
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -56,7 +57,10 @@ public class AxonCall {
     private String totalHits = "-1";
     private ArrayList<ArrayList<String>> axonDataRecords = new ArrayList<ArrayList<String>>();
     private ArrayList<String> axonDataFields = new ArrayList<String>();
+
     private ArrayList<AxonSystem> axonSystems = new ArrayList<AxonSystem>();
+    private ArrayList<AxonDataset> axonDatasets = new ArrayList<AxonDataset>();
+    private ArrayList<AxonAttribute> axonAttributes = new ArrayList<AxonAttribute>();
 
     // login
     private String username = Constants.NOT_PROVIDED;
@@ -245,77 +249,76 @@ public class AxonCall {
     }
 
     private void generateSystemDataset(SystemResponse systemResponse) {
-        String procName ="generateSystemDataset";
+        String procName = "generateSystemDataset";
         ArrayList<ArrayList<String>> axonData = new ArrayList<ArrayList<String>>();
-//        ArrayList<AxonSystem> axonSystems = new ArrayList<AxonSystem>();
+        ArrayList<AxonSystem> axonSystems = new ArrayList<AxonSystem>();
 
-        for ( SystemItem systemItem : systemResponse.items ) {
+        for (SystemItem systemItem : systemResponse.items) {
             axonData.add(systemItem.values);
             AxonSystem axonSystem = new AxonSystem();
             logVerbose("record values: " + systemItem.values);
-            for ( int fieldnr =0 ; fieldnr < systemResponse.fields.size() ; fieldnr++ ){
-                    logVerbose("fieldnr >" + fieldnr + "< named >" + systemResponse.fields.get(fieldnr)+"< has value >"
-                            + systemItem.values.get(fieldnr) +"<.");
-                    // cannot use gson as we are not sure that the field list (and therefore the value list) will always be in the same order as the attributes in the class
-                    // if you are an experienced Java developer: let us know how to achieve this better.
-                    switch (systemResponse.fields.get(fieldnr)) {
-                        case "id":
-                            axonSystem.id = systemItem.values.get(fieldnr);
-                            break;
-                        case "name":
-                            axonSystem.name = systemItem.values.get(fieldnr);
-                            break;
-                        case "description":
-                            axonSystem.description = systemItem.values.get(fieldnr);
-                            break;
-                        case "parentId":
-                            axonSystem.parentId = systemItem.values.get(fieldnr);
-                            break;
-                        case "parentName":
-                            axonSystem.parentName = systemItem.values.get(fieldnr);
-                            break;
-                        case "type":
-                            axonSystem.type = systemItem.values.get(fieldnr);
-                            break;
-                        case "axonStatus":
-                            axonSystem.axonStatus = systemItem.values.get(fieldnr);
-                            break;
-                        case "longName":
-                            axonSystem.longName = systemItem.values.get(fieldnr);
-                            break;
-                        case "lifecycle":
-                            axonSystem.lifecycle = systemItem.values.get(fieldnr);
-                            break;
-                        case "classification":
-                            axonSystem.classification = systemItem.values.get(fieldnr);
-                            break;
-                        case "createdDate":
-                            axonSystem.createdDate = systemItem.values.get(fieldnr);
-                            break;
-                        case "lastUpdatedDate":
-                            axonSystem.lastUpdatedDate = systemItem.values.get(fieldnr);
-                            break;
-                        case "accessControl":
-                            axonSystem.accessControl = systemItem.values.get(fieldnr);
-                            break;
-                        case "crating":
-                            axonSystem.crating = systemItem.values.get(fieldnr);
-                            break;
-                        case "irating":
-                            axonSystem.irating = systemItem.values.get(fieldnr);
-                            break;
-                        case "arating":
-                            axonSystem.arating = systemItem.values.get(fieldnr);
-                            break;
-                        case "ciarating":
-                            axonSystem.ciarating = systemItem.values.get(fieldnr);
-                            break;
-                            default:
-                            logError(Constants.DATA_STRUCTURE_ERROR, "Fieldname in JSON is not part of Java class structure. Please report this error to the developer.");
-                            break;
-                    }
+            for (int fieldnr = 0; fieldnr < systemResponse.fields.size(); fieldnr++) {
+                logVerbose("fieldnr >" + fieldnr + "< named >" + systemResponse.fields.get(fieldnr) + "< has value >"
+                        + systemItem.values.get(fieldnr) + "<.");
+                // cannot use gson as we are not sure that the field list (and therefore the value list) will always be in the same order as the attributes in the class
+                // if you are an experienced Java developer: let us know how to achieve this better.
+                switch (systemResponse.fields.get(fieldnr)) {
+                    case "id":
+                        axonSystem.id = systemItem.values.get(fieldnr);
+                        break;
+                    case "name":
+                        axonSystem.name = systemItem.values.get(fieldnr);
+                        break;
+                    case "description":
+                        axonSystem.description = systemItem.values.get(fieldnr);
+                        break;
+                    case "parentId":
+                        axonSystem.parentId = systemItem.values.get(fieldnr);
+                        break;
+                    case "parentName":
+                        axonSystem.parentName = systemItem.values.get(fieldnr);
+                        break;
+                    case "type":
+                        axonSystem.type = systemItem.values.get(fieldnr);
+                        break;
+                    case "axonStatus":
+                        axonSystem.axonStatus = systemItem.values.get(fieldnr);
+                        break;
+                    case "longName":
+                        axonSystem.longName = systemItem.values.get(fieldnr);
+                        break;
+                    case "lifecycle":
+                        axonSystem.lifecycle = systemItem.values.get(fieldnr);
+                        break;
+                    case "classification":
+                        axonSystem.classification = systemItem.values.get(fieldnr);
+                        break;
+                    case "createdDate":
+                        axonSystem.createdDate = systemItem.values.get(fieldnr);
+                        break;
+                    case "lastUpdatedDate":
+                        axonSystem.lastUpdatedDate = systemItem.values.get(fieldnr);
+                        break;
+                    case "accessControl":
+                        axonSystem.accessControl = systemItem.values.get(fieldnr);
+                        break;
+                    case "crating":
+                        axonSystem.crating = systemItem.values.get(fieldnr);
+                        break;
+                    case "irating":
+                        axonSystem.irating = systemItem.values.get(fieldnr);
+                        break;
+                    case "arating":
+                        axonSystem.arating = systemItem.values.get(fieldnr);
+                        break;
+                    case "ciarating":
+                        axonSystem.ciarating = systemItem.values.get(fieldnr);
+                        break;
+                    default:
+                        logError(Constants.DATA_STRUCTURE_ERROR, "Fieldname in JSON is not part of Java class structure. Please report this error to the developer.");
+                        break;
+                }
             }
-
             axonSystems.add(axonSystem);
         }
 
@@ -327,24 +330,170 @@ public class AxonCall {
 
     private void generateDatasetDataset(DatasetResponse datasetResponse) {
         ArrayList<ArrayList<String>> axonData = new ArrayList<ArrayList<String>>();
+        ArrayList<AxonDataset> axonDatasets = new ArrayList<AxonDataset>();
 
-        for ( DatasetItem datasetItem : datasetResponse.items ) {
+        for (DatasetItem datasetItem : datasetResponse.items) {
             axonData.add(datasetItem.values);
+        }
+
+        for (DatasetItem datasetItem : datasetResponse.items) {
+            axonData.add(datasetItem.values);
+            AxonDataset axonDataset = new AxonDataset();
+            logVerbose("record values: " + datasetItem.values);
+            for (int fieldnr = 0; fieldnr < datasetResponse.fields.size(); fieldnr++) {
+                logVerbose("fieldnr >" + fieldnr + "< named >" + datasetResponse.fields.get(fieldnr) + "< has value >"
+                        + datasetItem.values.get(fieldnr) + "<.");
+                // cannot use gson as we are not sure that the field list (and therefore the value list) will always be in the same order as the attributes in the class
+                // if you are an experienced Java developer: let us know how to achieve this better.
+                switch (datasetResponse.fields.get(fieldnr)) {
+                    case "createdDate":
+                        axonDataset.createdDate = datasetItem.values.get(fieldnr);
+                        break;
+                    case "lastUpdatedDate":
+                        axonDataset.lastUpdatedDate = datasetItem.values.get(fieldnr);
+                        break;
+                    case "id":
+                        axonDataset.id = datasetItem.values.get(fieldnr);
+                        break;
+                    case "name":
+                        axonDataset.name = datasetItem.values.get(fieldnr);
+                        break;
+                    case "definition":
+                        axonDataset.definition = datasetItem.values.get(fieldnr);
+                        break;
+                    case "refNumber":
+                        axonDataset.refNumber = datasetItem.values.get(fieldnr);
+                        break;
+                    case "type":
+                        axonDataset.type = datasetItem.values.get(fieldnr);
+                        break;
+                    case "axonStatus":
+                        axonDataset.axonStatus = datasetItem.values.get(fieldnr);
+                        break;
+                    case "lifecycle":
+                        axonDataset.lifecycle = datasetItem.values.get(fieldnr);
+                        break;
+                    case "systemId":
+                        axonDataset.systemId = datasetItem.values.get(fieldnr);
+                        break;
+                    case "systemName":
+                        axonDataset.systemName = datasetItem.values.get(fieldnr);
+                        break;
+                    case "glossaryId":
+                        axonDataset.glossaryId = datasetItem.values.get(fieldnr);
+                        break;
+                    case "glossaryName":
+                        axonDataset.glossaryName = datasetItem.values.get(fieldnr);
+                        break;
+                    case "accessControl":
+                        axonDataset.accessControl = datasetItem.values.get(fieldnr);
+                        break;
+                    default:
+                        logError(Constants.DATA_STRUCTURE_ERROR, "Fieldname in JSON is not part of Java class structure. Please report this error to the developer.");
+                        break;
+
+                }
+            }
+            axonDatasets.add(axonDataset);
         }
 
         setAxonDataFields(datasetResponse.fields);
         setAxonDataRecords(axonData);
+        setAxonDatasets(axonDatasets);
     }
 
     private void generateAttributeDataset(AttributeResponse attributeResponse) {
         ArrayList<ArrayList<String>> axonData = new ArrayList<ArrayList<String>>();
 
-        for ( AttributeItem attributeItem : attributeResponse.items ) {
+        for (AttributeItem attributeItem : attributeResponse.items) {
             axonData.add(attributeItem.values);
+        }
+
+        ArrayList<AxonAttribute> axonAttributes = new ArrayList<AxonAttribute>();
+
+        for (AttributeItem attributeItem : attributeResponse.items) {
+            axonData.add(attributeItem.values);
+        }
+
+        for (AttributeItem attributeItem : attributeResponse.items) {
+            axonData.add(attributeItem.values);
+            AxonAttribute axonAttribute = new AxonAttribute();
+            logVerbose("record values: " + attributeItem.values);
+            for (int fieldnr = 0; fieldnr < attributeResponse.fields.size(); fieldnr++) {
+                logVerbose("fieldnr >" + fieldnr + "< named >" + attributeResponse.fields.get(fieldnr) + "< has value >"
+                        + attributeItem.values.get(fieldnr) + "<.");
+                // cannot use gson as we are not sure that the field list (and therefore the value list) will always be in the same order as the attributes in the class
+                // if you are an experienced Java developer: let us know how to achieve this better.
+                switch (attributeResponse.fields.get(fieldnr)) {
+                    case "createdDate":
+                        axonAttribute.createdDate = attributeItem.values.get(fieldnr);
+                        break;
+                    case "lastUpdatedDate":
+                        axonAttribute.lastUpdatedDate = attributeItem.values.get(fieldnr);
+                        break;
+                    case "id":
+                        axonAttribute.id = attributeItem.values.get(fieldnr);
+                        break;
+                    case "name":
+                        axonAttribute.name = attributeItem.values.get(fieldnr);
+                        break;
+                    case "definition":
+                        axonAttribute.definition = attributeItem.values.get(fieldnr);
+                        break;
+                    case "refNumber":
+                        axonAttribute.refNumber = attributeItem.values.get(fieldnr);
+                        break;
+                    case "dataSetId":
+                        axonAttribute.dataSetId = attributeItem.values.get(fieldnr);
+                        break;
+                    case "dataSetName":
+                        axonAttribute.dataSetName = attributeItem.values.get(fieldnr);
+                        break;
+                    case "dbName":
+                        axonAttribute.dbName = attributeItem.values.get(fieldnr);
+                        break;
+                    case "systemId":
+                        axonAttribute.systemId = attributeItem.values.get(fieldnr);
+                        break;
+                    case "systemName":
+                        axonAttribute.systemName = attributeItem.values.get(fieldnr);
+                        break;
+                    case "origination":
+                        axonAttribute.origination = attributeItem.values.get(fieldnr);
+                        break;
+                    case "discoveryReviewStatus":
+                        axonAttribute.discoveryReviewStatus = attributeItem.values.get(fieldnr);
+                        break;
+                    case "confidenceScore":
+                        axonAttribute.confidenceScore = attributeItem.values.get(fieldnr);
+                        break;
+                    case "editabilityRole":
+                        axonAttribute.editabilityRole = attributeItem.values.get(fieldnr);
+                        break;
+                    case "editability":
+                        axonAttribute.editability = attributeItem.values.get(fieldnr);
+                        break;
+                    case "glossaryId":
+                        axonAttribute.glossaryId = attributeItem.values.get(fieldnr);
+                        break;
+                    case "glossaryName":
+                        axonAttribute.glossaryName = attributeItem.values.get(fieldnr);
+                        break;
+                    case "mandatory":
+                        axonAttribute.mandatory = attributeItem.values.get(fieldnr);
+                        break;
+                    default:
+                        logError(Constants.DATA_STRUCTURE_ERROR, "Fieldname in JSON is not part of Java class structure. Please report this error to the developer.");
+                        break;
+
+                }
+            }
+            axonAttributes.add(axonAttribute);
         }
 
         setAxonDataFields(attributeResponse.fields);
         setAxonDataRecords(axonData);
+        setAxonAttributes(axonAttributes);
     }
 
     //
@@ -358,6 +507,22 @@ public class AxonCall {
 
     public void setAxonSystems(ArrayList<AxonSystem> axonSystems) {
         this.axonSystems = axonSystems;
+    }
+
+    public ArrayList<AxonDataset> getAxonDatasets() {
+        return axonDatasets;
+    }
+
+    public void setAxonDatasets(ArrayList<AxonDataset> axonDatasets) {
+        this.axonDatasets = axonDatasets;
+    }
+
+    public ArrayList<AxonAttribute> getAxonAttributes() {
+        return axonAttributes;
+    }
+
+    public void setAxonAttributes(ArrayList<AxonAttribute> axonAttributes) {
+        this.axonAttributes = axonAttributes;
     }
 
     public ArrayList<String> getAxonDataFields() {
@@ -379,6 +544,7 @@ public class AxonCall {
     private void setAxonDataRecords(ArrayList<ArrayList<String>> axonDataRecords) {
         this.axonDataRecords = axonDataRecords;
     }
+
     public ArrayList<ArrayList<String>> getAxonDataRecords() {
         return this.axonDataRecords;
     }
@@ -618,13 +784,23 @@ class SystemQuery {
         return this.mainFacet;
     }
 }
+
 class SearchProperties {
     String offset;
     String limit;
     String levelChildren;
-    void setOffset(String offset) { this.offset = offset; }
-    void setLimit(String limit) { this.limit = limit; }
-    void setLevelChildren(String levelChildren) { this.levelChildren = levelChildren; }
+
+    void setOffset(String offset) {
+        this.offset = offset;
+    }
+
+    void setLimit(String limit) {
+        this.limit = limit;
+    }
+
+    void setLevelChildren(String levelChildren) {
+        this.levelChildren = levelChildren;
+    }
 }
 
 class SearchScope {
@@ -634,6 +810,7 @@ class SearchScope {
     void setFacetId(String facetId) {
         this.facetId = facetId;
     }
+
     void setLimits(String offset, String limit, String childrenLevel) {
         properties.setOffset(offset);
         properties.setLimit(limit);
@@ -652,11 +829,13 @@ class SystemResponse {
     ArrayList<String> fields;
     ArrayList<SystemItem> items;
 }
+
 class SystemItem {
     String ref;
     String id;
     ArrayList<String> values;
 }
+
 class AxonSystem {
     String id;
     String name;
@@ -684,26 +863,28 @@ class DatasetResponse {
     ArrayList<String> fields;
     ArrayList<DatasetItem> items;
 }
+
 class DatasetItem {
     String ref;
     String id;
     ArrayList<String> values;
 }
+
 class AxonDataset {
- String id;
- String name;
- String definition;
- String refNumber;
- String type;
- String axonStatus;
- String lifecycle;
- String systemId;
- String systemName;
- String glossaryId;
- String glossaryName;
- String createdDate;
- String lastUpdatedDate;
- String accessControl;
+    String id;
+    String name;
+    String definition;
+    String refNumber;
+    String type;
+    String axonStatus;
+    String lifecycle;
+    String systemId;
+    String systemName;
+    String glossaryId;
+    String glossaryName;
+    String createdDate;
+    String lastUpdatedDate;
+    String accessControl;
 }
 
 class AttributeResponse {
@@ -713,11 +894,13 @@ class AttributeResponse {
     ArrayList<String> fields;
     ArrayList<AttributeItem> items;
 }
+
 class AttributeItem {
     String ref;
     String id;
     ArrayList<String> values;
 }
+
 class AxonAttribute {
     String id;
     String name;
