@@ -315,7 +315,8 @@ public class AxonCall {
                         axonSystem.ciarating = systemItem.values.get(fieldnr);
                         break;
                     default:
-                        logError(Constants.DATA_STRUCTURE_ERROR, "Fieldname in JSON is not part of Java class structure. Please report this error to the developer.");
+                        logError(Constants.DATA_STRUCTURE_ERROR, "Fieldname >" + systemResponse.fields.get(fieldnr)
+                                + "< in JSON is not part of Java class structure. Please report this error to the developer.");
                         break;
                 }
             }
@@ -387,6 +388,9 @@ public class AxonCall {
                         break;
                     case "accessControl":
                         axonDataset.accessControl = datasetItem.values.get(fieldnr);
+                        break;
+                    case "LoGSRecordID":
+                        axonDataset.LoGSRecordID = datasetItem.values.get(fieldnr);
                         break;
                     default:
                         logError(Constants.DATA_STRUCTURE_ERROR, "Fieldname in JSON is not part of Java class structure. Please report this error to the developer.");
@@ -885,6 +889,7 @@ class AxonDataset {
     String createdDate;
     String lastUpdatedDate;
     String accessControl;
+    String LoGSRecordID;
 }
 
 class AttributeResponse {
