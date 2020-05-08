@@ -25,7 +25,7 @@
 
 package nl.jacbeekers;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -33,15 +33,15 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-import java.util.stream.Collectors;
+//import java.util.List;
+//import java.util.stream.Collectors;
 
 import com.google.gson.Gson;
 
 import static java.net.HttpURLConnection.HTTP_OK;
 
 public class AxonCall {
-    private static final org.apache.log4j.Logger logger = Logger.getLogger(AxonCall.class.getName());
+    private static final org.apache.logging.log4j.Logger logger = LogManager.getLogger(AxonCall.class);
 
     private int nrRows;
     private String resultCode = Constants.OK;

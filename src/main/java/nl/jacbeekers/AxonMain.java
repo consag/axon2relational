@@ -24,11 +24,12 @@
  */
 package nl.jacbeekers;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
 import java.util.ArrayList;
 
 public class AxonMain {
-    public static void usage(org.apache.log4j.Logger logger) {
+    public static void usage(org.apache.logging.log4j.Logger logger) {
         logger.info("Usage:");
         logger.info(AxonMain.class.getName() +" <loginURL> <username> <password> <queryURL> <mainFacet> [maxNrRecords]" );
         logger.info("where:");
@@ -41,7 +42,9 @@ public class AxonMain {
     }
 
     public static void main(String[] args) {
-        org.apache.log4j.Logger logger = Logger.getLogger(AxonMain.class.getName());
+        final org.apache.logging.log4j.Logger logger = LogManager.getLogger(AxonMain.class);
+
+//        org.apache.log4j.Logger logger = Logger.getLogger(AxonMain.class.getName());
 
         if (args.length < 5) {
             usage(logger);
