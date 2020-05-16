@@ -4,7 +4,7 @@
 
 | dependency        | Version     | Supported          |
 | ----------------- | ----------- | ------------------ |
-| log4j             | 1.2.17      | :white_check_mark: |
+| log4j             | 2.13.2      | :white_check_mark: |
 | gson              | 2.8.6       | :white_check_mark: |
 | commons-beanutils | 1.9.4       | :white_check_mark: |
 | java jre          | 1.8.0.121   | :white_check_mark: |
